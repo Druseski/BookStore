@@ -1,4 +1,5 @@
-﻿using BookStore.Services.Interfaces;
+﻿using BookStore.Entities;
+using BookStore.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,13 @@ namespace BookStore.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public JsonResult CreateAuthorAJAX(Author author)
+        {
+            _authorService.Add(author);
+            return Json(author);
         }
     }
 }

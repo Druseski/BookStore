@@ -2,167 +2,168 @@
 @{
     ViewData["Title"] = "Edit";
 }
-
-<div class="row">
-    <div class="col-12 text-center">
-        <h1>
-            EDIT BOOK
-        </h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>
+                EDIT BOOK
+            </h1>
+        </div>
     </div>
-</div>
-<hr />
-<div class="row">
-    <div class="col-12">
-        <form asp-action="Edit">
-            <div class="row form-group">
-                <div class="col-6">
-                    <label asp-for="Title" for="title" class="form-label">Title</label>
-                    <input asp-for="Title" type="Text" id="title" class="form-control" />
+    <hr />
+    <div class="row">
+        <div class="col-12">
+            <form asp-action="Edit">
+                <div class="row form-group">
+                    <div class="col-6">
+                        <label asp-for="Title" for="title" class="form-label">Title</label>
+                        <input asp-for="Title" type="Text" id="title" class="form-control" />
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="AuthorName" for="AuthorName" class="form-label">AuthorName</label>
+                        <input asp-for="AuthorName" type="text" id="AuthorName" class="form-control" />
+                    </div>
                 </div>
-                <div class="col-6">
-                    <label asp-for="AuthorName" for="AuthorName" class="form-label">AuthorName</label>
-                    <input asp-for="AuthorName" type="text" id="AuthorName" class="form-control" />
+                <div class="row form-group">
+                    <div class="col-12">
+                        <label asp-for="AuthorID" for="AuthorID" class="form-label">AuthorID</label>
+                        <select asp-for="AuthorID" class="form-select form-control" asp-items="ViewBag.AuthorID" id="AuthorID" aria-label="Default select example"></select>
+                    </div>
                 </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-12">
-                    <label asp-for="AuthorID" for="AuthorID" class="form-label">AuthorID</label>
-                    <select asp-for="AuthorID" class="form-select form-control" asp-items="ViewBag.AuthorID" id="AuthorID" aria-label="Default select example"></select>
+                <div class="row form-group">
+                    <div class="col-6">
+                        <label asp-for="YearOfIssue" for="YearOfIssue" class="form-label">YearOfIssue</label>
+                        <input asp-for="YearOfIssue" type="date" id="YearOfIssue" class="form-control" />
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="NumberOfPages" for="NumberOfPages" class="form-label">NumberOfPages</label>
+                        <input asp-for="NumberOfPages" type="text" id="NumberOfPages" class="form-control" />
+                    </div>
                 </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-6">
-                    <label asp-for="YearOfIssue" for="YearOfIssue" class="form-label">YearOfIssue</label>
-                    <input asp-for="YearOfIssue" type="date" id="YearOfIssue" class="form-control" />
-                </div>
-                <div class="col-6">
-                    <label asp-for="NumberOfPages" for="NumberOfPages" class="form-label">NumberOfPages</label>
-                    <input asp-for="NumberOfPages" type="text" id="NumberOfPages" class="form-control" />
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-6">
-                    <label asp-for="PublisherName" for="PublisherName" class="form-label">PublisherName</label>
-                    <input asp-for="PublisherName" type="text" id="PublisherName" class="form-control" />
-                </div>
-                <div class="col-6">
-                    <label asp-for="PublisherID" for="PublisherID" class="form-label">PublisherID</label>
-                    <select asp-for="PublisherID" class="form-select form-control" asp-items="ViewBag.PublisherID" id="PublisherID" aria-label="Default select example"></select>
+                <div class="row form-group">
+                    <div class="col-6">
+                        <label asp-for="PublisherName" for="PublisherName" class="form-label">PublisherName</label>
+                        <input asp-for="PublisherName" type="text" id="PublisherName" class="form-control" />
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="PublisherID" for="PublisherID" class="form-label">PublisherID</label>
+                        <select asp-for="PublisherID" class="form-select form-control" asp-items="ViewBag.PublisherID" id="PublisherID" aria-label="Default select example"></select>
+                    </div>
+
                 </div>
 
+                <div class="row form-group">
+                    <div class="col-6">
+                        <label asp-for="UserID" for="UserID" class="form-label">UserID</label>
+                        <input asp-for="UserID" type="text" id="UserID" class="form-control" />
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="Genre" for="Genre" class="form-label">Genre</label>
+                        <input asp-for="Genre" type="text" id="Genre" class="form-control" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-6">
+                        <label asp-for="CategoryName" for="CategoryName" class="form-label">CategoryName</label>
+                        <input asp-for="CategoryName" type="text" id="CategoryName" class="form-control" />
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="CategoryID" for="CategoryID" class="form-label">CategoryID</label>
+                        <select asp-for="CategoryID" class="form-select form-control" asp-items="ViewBag.CategoryList" id="CategoryID" aria-label="Default select example"></select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="Price" for="Price" class="form-label">Price</label>
+                        <input asp-for="Price" type="text" id="Price" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="BookType" for="BookType" class="form-label">BookType</label>
+                        <input asp-for="BookType" type="text" id="BookType" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="BookCoverType" for="BookCoverType" class="form-label">BookCoverType</label>
+                        <input asp-for="BookCoverType" type="text" id="BookCoverType" class="form-control" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-12">
+                        <label asp-for="Discription" for="Discription" class="form-label">Discription</label>
+                        <input asp-for="Discription" type="text" id="Discription" class="form-control" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-6">
+                        <label asp-for="Language" for="Language" class="form-label">Language</label>
+                        <input asp-for="Language" type="text" id="Language" class="form-control" />
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="Country" for="Country" class="form-label">Country</label>
+                        <input asp-for="Country" type="text" id="Country" class="form-control" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-6">
+                        <label asp-for="Edition" for="Edition" class="form-label">Edition</label>
+                        <input asp-for="Edition" type="text" id="Edition" class="form-control" />
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="Dimension" for="Dimension" class="form-label">Dimension</label>
+                        <input asp-for="Dimension" type="text" id="Dimension" class="form-control" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-6">
+                        <label asp-for="Weight" for="Weight" class="form-label">Weight</label>
+                        <input asp-for="Weight" type="text" id="Weight" class="form-control" />
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="Copies" for="Copies" class="form-label">Copies</label>
+                        <input asp-for="Copies" type="text" id="Copies" class="form-control" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-6">
+                        <label asp-for="Shipping" for="Shipping" class="form-label">Shipping</label>
+                        <input asp-for="Shipping" type="text" id="Shipping" class="form-control" />
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="SoldItems" for="SoldItems" class="form-label">SoldItems</label>
+                        <input asp-for="SoldItems" type="text" id="SoldItems" class="form-control" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-12">
+                        <label asp-for="PhotoURL" for="PhotiURL" class="form-label">PhotiURL</label>
+                        <input asp-for="PhotoURL" type="text" id="PhotiURL" class="form-control" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-6">
+                        <label asp-for="Rating" for="Rating" class="form-label">Rating</label>
+                        <input asp-for="Rating" type="text" id="Rating" class="form-control" />
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="DateAdded" for="DateAdded" class="form-label">DateAdded</label>
+                        <input asp-for="DateAdded" type="date" id="DateAdded" class="form-control" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-12">
+                        <input class="btn btn-primary btn-block" type="submit" value="EDIT" />
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-12 text-left">
+                    <a asp-action="Index">
+                        Back to LIst
+                    </a>
+                </div>
             </div>
 
-            <div class="row form-group">
-                <div class="col-6">
-                    <label asp-for="UserID" for="UserID" class="form-label">UserID</label>
-                    <input asp-for="UserID" type="text" id="UserID" class="form-control" />
-                </div>
-                <div class="col-6">
-                    <label asp-for="Genre" for="Genre" class="form-label">Genre</label>
-                    <input asp-for="Genre" type="text" id="Genre" class="form-control" />
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-6">
-                    <label asp-for="CategoryName" for="CategoryName" class="form-label">CategoryName</label>
-                    <input asp-for="CategoryName" type="text" id="CategoryName" class="form-control" />
-                </div>
-                <div class="col-6">
-                    <label asp-for="CategoryID" for="CategoryID" class="form-label">CategoryID</label>
-                    <select asp-for="CategoryID" class="form-select form-control" asp-items="ViewBag.CategoryList" id="CategoryID" aria-label="Default select example"></select>
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-4">
-                    <label asp-for="Price" for="Price" class="form-label">Price</label>
-                    <input asp-for="Price" type="text" id="Price" class="form-control" />
-                </div>
-                <div class="col-4">
-                    <label asp-for="BookType" for="BookType" class="form-label">BookType</label>
-                    <input asp-for="BookType" type="text" id="BookType" class="form-control" />
-                </div>
-                <div class="col-4">
-                    <label asp-for="BookCoverType" for="BookCoverType" class="form-label">BookCoverType</label>
-                    <input asp-for="BookCoverType" type="text" id="BookCoverType" class="form-control" />
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-12">
-                    <label asp-for="Discription" for="Discription" class="form-label">Discription</label>
-                    <input asp-for="Discription" type="text" id="Discription" class="form-control" />
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-6">
-                    <label asp-for="Language" for="Language" class="form-label">Language</label>
-                    <input asp-for="Language" type="text" id="Language" class="form-control" />
-                </div>
-                <div class="col-6">
-                    <label asp-for="Country" for="Country" class="form-label">Country</label>
-                    <input asp-for="Country" type="text" id="Country" class="form-control" />
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-6">
-                    <label asp-for="Edition" for="Edition" class="form-label">Edition</label>
-                    <input asp-for="Edition" type="text" id="Edition" class="form-control" />
-                </div>
-                <div class="col-6">
-                    <label asp-for="Dimension" for="Dimension" class="form-label">Dimension</label>
-                    <input asp-for="Dimension" type="text" id="Dimension" class="form-control" />
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-6">
-                    <label asp-for="Weight" for="Weight" class="form-label">Weight</label>
-                    <input asp-for="Weight" type="text" id="Weight" class="form-control" />
-                </div>
-                <div class="col-6">
-                    <label asp-for="Copies" for="Copies" class="form-label">Copies</label>
-                    <input asp-for="Copies" type="text" id="Copies" class="form-control" />
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-6">
-                    <label asp-for="Shipping" for="Shipping" class="form-label">Shipping</label>
-                    <input asp-for="Shipping" type="text" id="Shipping" class="form-control" />
-                </div>
-                <div class="col-6">
-                    <label asp-for="SoldItems" for="SoldItems" class="form-label">SoldItems</label>
-                    <input asp-for="SoldItems" type="text" id="SoldItems" class="form-control" />
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-12">
-                    <label asp-for="PhotoURL" for="PhotiURL" class="form-label">PhotiURL</label>
-                    <input asp-for="PhotoURL" type="text" id="PhotiURL" class="form-control" />
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-6">
-                    <label asp-for="Rating" for="Rating" class="form-label">Rating</label>
-                    <input asp-for="Rating" type="text" id="Rating" class="form-control" />
-                </div>
-                <div class="col-6">
-                    <label asp-for="DateAdded" for="DateAdded" class="form-label">DateAdded</label>
-                    <input asp-for="DateAdded" type="date" id="DateAdded" class="form-control" />
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col-12">
-                    <input class="btn btn-primary btn-block" type="submit" value="EDIT" />
-                </div>
-            </div>
-        </form>
-        <div class="row">
-            <div class="col-12 text-left">
-                <a asp-action="Index">
-                    Back to LIst
-                </a>
-            </div>
+
         </div>
 
-
     </div>
-
 </div>

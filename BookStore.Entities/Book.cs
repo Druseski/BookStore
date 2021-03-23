@@ -14,8 +14,9 @@ namespace BookStore.Entities
         public string Title { get; set; }
 
         [StringLength(350)]
+        [Display(Name = "Author")]
         public string AuthorName { get; set; }
-
+        [Display(Name ="Author")]
         public int AuthorID { get; set; }
 
         public Author Author { get; set; }
@@ -25,9 +26,9 @@ namespace BookStore.Entities
         public int NumberOfPages { get; set; }
 
         [StringLength(350)]
-
+        [Display(Name = "Publisher")]
         public string PublisherName { get; set; }
-
+        [Display(Name = "Publlisher")]
         public int PublisherID { get; set; }
 
         public Publisher Publisher { get; set; }
@@ -36,9 +37,9 @@ namespace BookStore.Entities
 
         [StringLength(150)]
         public string Genre { get; set; }
-
+        [Display(Name = "Category")]
         public string CategoryName { get; set; }
-
+        [Display(Name = "Category")]
         public int CategoryID { get; set; }
         public Category Category { get; set; }
 

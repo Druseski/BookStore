@@ -1,5 +1,4 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿/* PBasic */
 
 a.navbar-brand {
   white-space: normal;
@@ -62,6 +61,45 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
+/* ********* Search Home ************ */
+.search-main {
+    position: relative;
+    padding-left: 5em !important;
+    padding-right: 5em !important;
+}
+.search-btn {
+    position: absolute !important;
+    right: 6em;
+    top: 22px;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+.search-btn-icon {
+    position: absolute !important;
+    left: 4em;
+    top: 17px;
+    font-size: 1.3em;
+    background-color: #eaeaea;
+}
+.search-box-style{
+   
+    height:50px;
+    font-size:1.5em;
+    background-color:#eaeaea;
+    padding-left:3em;
+    padding-right:10em;
+
+}
+/* ****Book****** */
+.btn-add-new-custom{
+
+    float:right !important;
+}
+a:not([href]):not([tabindex]).btn-add-new-custom{
+    color:white !important;
+}
+/*******Footer*******/
 .footer {
   position: absolute;
   bottom: 0;
@@ -69,3 +107,4 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+/* **********@Medias********** */
