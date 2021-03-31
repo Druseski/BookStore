@@ -52,6 +52,16 @@ namespace BookStore.Repositories
             return result;
         }
 
+        public IEnumerable<Book> GetAllBooksWithFullRelationalData()
+        {
+            var result = _context.Books
+                .Include(a => a.Author)
+                .Include(c => c.Category)
+                .Include(p => p.Publisher)
+                .AsEnumerable();
+            return result;
+
+        }
         public Book GetBookByID(int id)
         {
             //var result = _context.Books.FromSqlRaw("SELECT * FROM Books WHERE ID=" + id).FirstOrDefault();

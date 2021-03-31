@@ -26,7 +26,14 @@ namespace BookStore.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var books = _bookService.GetAllBooks();
+            var booksWithFullData = _bookService.GetAllBooksWithFullRelationalData();
+            var homeViewModel = new HomeviewModel()
+            {
+                AllBooksList = books
+            };
+
+            return View(homeViewModel);
         }
 
         public IActionResult Privacy()

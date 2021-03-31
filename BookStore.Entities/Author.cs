@@ -18,7 +18,7 @@ namespace BookStore.Entities
 
         public DateTime DateBirth { get; set; }
 
-        [StringLength(500)]
+        [StringLength(1500)]
         public string ShortDiscription { get; set; }
 
         [StringLength(50)]

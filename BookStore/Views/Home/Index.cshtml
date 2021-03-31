@@ -1,5 +1,6 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model BookStore.Models.HomeviewModel
+@{
+    ViewData["Title"] = "Bookstore";
 }
 
 <!--Search Section-->
@@ -13,11 +14,48 @@
     </form>
 </div>
 <!--Banner Section-->
-<div class=" container-fluid">
-
+<div class=" container-fluid bookstore-background ">
+    <h1 class="display-4 banner-text-style1">Welcome to our online bookstore </h1>
+    <h4 class="display-4 banner-text-style2" >Find Your Next Adventure</h4>
+    <div class="col-12 col-md-7 fa-quote-left">
+        <blockquote class="quote-text-quote" id="quote">    </blockquote>
+        <p class="quote-text-author" id="quote_author"></p>
+        <p class="quote-text-tags" id="quote_tags"></p>
+    </div>
+         
 </div>
 <!--All Books Section-->
-<div class=" container-fluid">
-
+<div class=" container-fluid ">
+    <h2>All Books</h2>
+    <h6><em>List of all books</em></h6>
+    <div class="row pb-5">
+        @foreach (var book in Model.AllBooksList)
+        {
+            <div class="col-12 col-md-2 mt-5">
+                <div class="card h-100">
+                    <img src="" class="img-fluid" style="max-width:350px"/>
+                    <div class="card-body">
+                        <h5 class="card-title"> @Html.DisplayFor(modelItem=>book.Title)</h5>
+                        <h6 class="card-"><em>by</em> @Html.DisplayFor(modelItem => book.AuthorName)</h6>
+                        <hr />
+                        <p class="card-text">Category: @Html.DisplayFor(modelItem => book.CategoryName) </p>
+                        <p class="card-text">Genre: @Html.DisplayFor(modelItem => book.Genre)</p>
+                        <p class="card-text">Book Type: @Html.DisplayFor(modelItem => book.BookType)</p>
+                        <button class="btn btn-secondary btn-block" >
+                        <i class="fas fa-plus"></i>
+                            Add to Wishlist</button>
+                        <button class="btn btn-success btn-block">
+                        <i class="fas fa-cart-plus"> </i>
+                            Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>
+
+
+@section Scripts {
+    <script src="~/js/Home/Home.js"></script>
+}
 

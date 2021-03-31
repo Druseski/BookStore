@@ -1,4 +1,69 @@
-﻿
-@{
-}
-<h1>Publisher</h1>
+﻿@model IEnumerable<BookStore.Entities.Publisher>
+
+<div class="container">
+    <h1>Publisher</h1>
+    <div class="row mt-2">
+        <div class="col-12">
+            <a asp-action="Create" class="btn btn-success " style="float:right">
+                <i class="fas fa-plus"></i> &nbsp; Create
+            </a>
+        </div>
+    </div>
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Country
+                </th>
+                <th>
+                    Year
+                </th>
+                <th colspan="3" class="text-center">
+                    Actions
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var publisher in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => publisher.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => publisher.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => publisher.Country)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => publisher.Year)
+                    </td>
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@publisher.ID" class="btn btn-primary ">
+                            <i class="fas fa-edit" &nbps></i> &nbsp; Edit
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@publisher.ID" class="btn btn-info">
+                            <i class="fas fa-info"></i> &nbsp;Details
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@publisher.ID" class="btn btn-danger">
+                            <i class="fas fa-trash"></i> &nbsp;Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -15,6 +15,6 @@ namespace BookStore.Repositories.Interfaces
         Book GetBookByID(int id);
 
         IEnumerable<Book> GetAllBooks();
-
+        IEnumerable<Book> GetAllBooksWithFullRelationalData();
     }
 }

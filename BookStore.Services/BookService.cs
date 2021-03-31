@@ -48,7 +48,11 @@ namespace BookStore.Services
             var result = _bookRepository.GetBookByID(id);
             return result;
         }
-
+        public IEnumerable<Book> GetAllBooksWithFullRelationalData()
+        {
+            var result = _bookRepository.GetAllBooksWithFullRelationalData();
+            return result;
+        }
         #region Helper Function
         public Tuple<List<SelectListItem>, List<SelectListItem>, List<SelectListItem>> FillDropdowns(
             IEnumerable<Category> categories,
@@ -123,6 +127,8 @@ namespace BookStore.Services
 
             return Tuple.Create(Categories, Authors, Publishers);
         }
+
+
         #endregion
     }
 }

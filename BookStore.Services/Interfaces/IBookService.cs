@@ -23,5 +23,7 @@ namespace BookStore.Services.Interfaces
             IEnumerable<Author> authors ,
             IEnumerable<Publisher> publishers);
 
+        IEnumerable<Book> GetAllBooksWithFullRelationalData();
+
     }
 }

@@ -47,7 +47,7 @@ namespace BookStore.Models
 
         public double Price { get; set; }
 
-        [StringLength(500)]
+        [StringLength(1500)]
         public string Discription { get; set; }
 
         [StringLength(50)]
@@ -85,7 +85,7 @@ namespace BookStore.Models
 
         public DateTime AuthorDateBirthDTO { get; set; }
 
-       
+       [StringLength(1500)]
         public string AuthorShortDiscriptionDTO { get; set; }
 
         
@@ -105,7 +105,7 @@ namespace BookStore.Models
         public string PublisherCountryDTO { get; set; }
 
         [StringLength(50)]
-        public string PublisherYear { get; set; }
+        public string PublisherYearDTO { get; set; }
 
         // ************CategoryData
 

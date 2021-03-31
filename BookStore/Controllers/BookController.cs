@@ -1,5 +1,6 @@
 ﻿using BookStore.Entities;
 using BookStore.Models;
+using BookStore.Services;
 using BookStore.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -40,10 +41,10 @@ namespace BookStore.Controllers
             var categories = _categoryService.GetAllCategories();
             var authors = _authorService.GetAllAuthors();
             var publishers = _publisherService.GetAllPublishers();
-            var dropdowns = _bookService.FillDropdowns(categories, authors , publishers);
+            var dropdowns = _bookService.FillDropdowns(categories, authors, publishers);
 
             ViewBag.CategoryList = dropdowns.Item1;
-            ViewBag.AuthorID  = dropdowns.Item2;
+            ViewBag.AuthorID = dropdowns.Item2;
             ViewBag.PublisherID = dropdowns.Item3;
             //ViewBag.CategoryList = categories;
             //ViewBag.AuthorID = authors;
@@ -80,6 +81,7 @@ namespace BookStore.Controllers
                 book.BookCoverType = model.BookCoverType;
                 book.BookType = model.BookType;
                 book.Category = model.Category;
+                book.CategoryID = model.CategoryID;
                 book.CategoryName = model.CategoryName;
                 book.Copies = model.Copies;
                 book.Country = model.Country;
@@ -93,23 +95,24 @@ namespace BookStore.Controllers
                 book.PhotoURL = model.PhotoURL;
                 book.Price = model.Price;
                 book.PublisherName = model.PublisherName;
+                book.PublisherID = model.PublisherID;
                 book.Rating = model.Rating;
                 book.Shipping = model.Shipping;
                 book.SoldItems = model.SoldItems;
                 book.Weight = model.Weight;
                 book.YearOfIssue = model.YearOfIssue;
-              
+
 
                 _bookService.Add(book);
 
-             
+
             }
             return RedirectToAction(nameof(Index));
         }
 
         [HttpGet]
         public IActionResult Edit(int id)
-        { 
+        {
             var book = _bookService.GetBookByID(id);
             var categories = _categoryService.GetAllCategories();
             var authors = _authorService.GetAllAuthors();
@@ -146,12 +149,22 @@ namespace BookStore.Controllers
             var book = _bookService.GetBookByID(id);
             return View(book);
         }
-       [HttpPost]
-       public IActionResult DeleteConfirmed(int id)
+        [HttpPost]
+        public IActionResult DeleteConfirmed(int id)
         {
             var book = _bookService.GetBookByID(id);
             _bookService.Delete(book.ID);
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpGet]
+        public JsonResult GetAllBooksAJAX()
+        {
+            var allBooks = _bookService.GetAllBooks();
+            return Json(new { booksData = allBooks });
+        }
     }
+
+
+
 }

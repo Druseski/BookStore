@@ -51,7 +51,7 @@ namespace BookStore.Entities
 
         public double Price { get; set; }
 
-        [StringLength(500)]
+        [StringLength(1500)]
         public string Discription { get; set; }
 
         [StringLength(50)]
