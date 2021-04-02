@@ -21,7 +21,7 @@
                         <input asp-for="Title" type="Text" id="title" class="form-control" />
                     </div>
                     <div class="col-6">
-                        @*<label asp-for="AuthorName" for="AuthorName" class="form-label">AuthorName</label>*@
+
 
                         <label asp-for="AuthorID" for="AuthorID" class="form-label"></label>
                         <select asp-for="AuthorID" class="form-select form-control" asp-items="ViewBag.AuthorID" id="AuthorID"></select>
@@ -29,11 +29,7 @@
                         <input asp-for="AuthorName" hidden type="text" id="AuthorName" class="form-control" />
                     </div>
                 </div>
-                @*<div class="row form-group">
-                        <div class="col-12">
 
-                        </div>
-                    </div>*@
                 <div class="row form-group">
                     <div class="col-6">
                         <label asp-for="YearOfIssue" for="YearOfIssue" class="form-label">YearOfIssue</label>
@@ -46,15 +42,12 @@
                 </div>
                 <div class="row form-group">
                     <div class="col-12">
-                        @*<label asp-for="PublisherName" for="PublisherName" class="form-label">PublisherName</label>*@
+
                         <label asp-for="PublisherID" for="PublisherID" class="form-label"></label>
                         <select asp-for="PublisherID" class="form-select form-control" asp-items="ViewBag.PublisherID" id="PublisherID"></select>
                         <a class="btn btn-success btn-sm btn-add-new-custom" data-toggle="modal" data-target="#publisherModal">Add New Publisher</a>
                         <input asp-for="PublisherName" hidden type="text" id="PublisherName" class="form-control" />
                     </div>
-                    @*<div class="col-6">
-
-                        </div>*@
 
                 </div>
 
@@ -70,15 +63,13 @@
                 </div>
                 <div class="row form-group">
                     <div class="col-12">
-                        @*<label asp-for="CategoryName" for="CategoryName" class="form-label">CategoryName</label>*@
+
                         <input asp-for="CategoryName" hidden type="text" id="CategoryName" class="form-control" />
                         <label asp-for="CategoryID" for="CategoryID" class="form-label"></label>
                         <select asp-for="CategoryID" class="form-select form-control" asp-items="ViewBag.CategoryList" id="CategoryID"></select>
                         <a class="btn btn-success btn-sm btn-add-new-custom" data-toggle="modal" data-target="#categoryModal">Add New Category</a>
                     </div>
-                    @*<div class="col-6">
 
-                        </div>*@
                 </div>
                 <div class="row form-group">
                     <div class="col-4">
@@ -142,8 +133,8 @@
                 </div>
                 <div class="row form-group">
                     <div class="col-12">
-                        <label asp-for="PhotoURL" for="PhotiURL" class="form-label">PhotiURL</label>
-                        <input asp-for="PhotoURL" type="text" id="PhotiURL" class="form-control" />
+                        @*<label asp-for="PhotoURL" for="PhotiURL" class="form-label">PhotiURL</label>*@
+                        <input hidden asp-for="PhotoURL" type="text" id="PhotiURL" class="form-control" />
                     </div>
                 </div>
                 <div class="row form-group">
@@ -156,12 +147,23 @@
                         <input asp-for="DateAdded" type="date" id="DateAdded" class="form-control" />
                     </div>
                 </div>
+
                 <div class="row form-group">
                     <div class="col-12">
                         <input class="btn btn-primary btn-block" type="submit" value="CREATE" />
                     </div>
                 </div>
             </form>
+            <!--Upload Photo-->
+            <div class="row form-group">
+                <div class="col-12">
+                    <label>Upload Photo - Book Cover </label>
+                </div>
+                <div class="col-12">
+                    <input type="file" #file accept="image/*" id="photoUpload" />
+                    <button class="btn btn-custom-upload btn-block mt-2" id="uploadPhoto">Upload Photo </button>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-12 text-left">
                     <a asp-action="Index">

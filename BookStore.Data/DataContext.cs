@@ -524,7 +524,7 @@ namespace BookStore.Data
                     Shipping = "Free",
                     Weight = 0.40,
                     YearOfIssue = new DateTime(2003, 12, 23, 00, 00, 00),
-                    PhotoURL = "WilliamShakespeare_Othell...",
+                    PhotoURL = "WilliamShakespeare_Othello.jpg",
                     SoldItems = 5,
                     DateAdded = DateTime.Now,
                     Rating = 3.5,
