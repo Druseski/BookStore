@@ -1,9 +1,11 @@
 ﻿using BookStore.Entities;
+using BookStore.Entities.Loger;
 using BookStore.Models;
 using BookStore.Services;
 using BookStore.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,27 +15,32 @@ namespace BookStore.Controllers
 {
     public class BookController : Controller
     {
+        
         private readonly IBookService _bookService;
         private readonly IAuthorService _authorService;
         private readonly ICategoryService _categoryService;
         private readonly IPublisherService _publisherService;
+        private readonly ILogger<BookController> _logger;
 
         public BookController(
             IBookService bookService,
             IAuthorService authorService,
             ICategoryService categoryService,
-            IPublisherService publisherService
+            IPublisherService publisherService,
+            ILogger<BookController> logger
             )
         {
             _bookService = bookService;
             _authorService = authorService;
             _categoryService = categoryService;
             _publisherService = publisherService;
+            _logger = logger;
         }
 
         public IActionResult Index()
         {
             var books = _bookService.GetAllBooks();
+            _logger.LogInformation(LoggerMasageDisplay.BooksListed);
             return View(books);
         }
 
@@ -173,8 +180,8 @@ namespace BookStore.Controllers
                 var file = Request.Form.Files[0];
                 var folderName = Path.Combine("wwwroot", "photos");
                 var pathToSave = Path.Combine(Directory.GetCurrentDirectory(),folderName);
-
-                if(file.Length > 0)
+                
+                if (file.Length > 0)
                 {
                     var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
                     var fullPath = Path.Combine(pathToSave, fileName);
@@ -194,7 +201,7 @@ namespace BookStore.Controllers
             }
             catch (Exception ex)
             {
-
+               
                 return StatusCode(500, "Internal Server Error" + ex);
             }
 

@@ -1,6 +1,8 @@
 ﻿using BookStore.Data;
 using BookStore.Entities;
+using BookStore.Entities.Loger;
 using BookStore.Repositories.Interfaces;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,30 +12,40 @@ namespace BookStore.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {
+
         private readonly DataContext _context;
 
         public CategoryRepository(DataContext context)
         {
+         
             _context = context;
         }
 
         public void AddCategory(Category category)
         {
-            _context.Categories.Add(category);
-            _context.SaveChanges();
+      
+                _context.Categories.Add(category);
+                _context.SaveChanges();
+
+
         }
 
         public void DeleteCategory(int categoryId)
         {
-            Category category = GetCategoryById(categoryId);
-            _context.Categories.Remove(category);
-            _context.SaveChanges();
+      
+                Category category = GetCategoryById(categoryId);
+                _context.Categories.Remove(category);
+                _context.SaveChanges();
+
         }
 
         public void EditCategory(Category category)
         {
-            _context.Categories.Update(category);
-            _context.SaveChanges();
+       
+                _context.Categories.Update(category);
+                _context.SaveChanges();
+
+
         }
 
         public IEnumerable<Category> GetAllCategories()

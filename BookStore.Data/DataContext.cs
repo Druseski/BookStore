@@ -24,33 +24,23 @@ namespace BookStore.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Data Seed
+            // *************** DATA SEED:
             #region Category
             modelBuilder.Entity<Category>().HasData(
-                    new Category
-                    { ID = 1, Name = "Fiction" },
-                    new Category
-                    { ID = 2, Name = "Action" },
-                    new Category
-                    { ID = 3, Name = "Crime" },
-                    new Category
-                    { ID = 4, Name = "Adventure" },
-                    new Category
-                    { ID = 5, Name = "Drama" },
-                    new Category
-                    { ID = 6, Name = "Fantasy" },
-                    new Category
-                    { ID = 7, Name = "Thriller" },
-                    new Category
-                    { ID = 8, Name = "General" },
-                    new Category
-                    { ID = 9, Name = "Horror" },
-                    new Category
-                    { ID = 10, Name = "Comedy" },
-                    new Category
-                    { ID = 11, Name = "Uncategorized" }
-                    );
+                new Category { ID = 1, Name = "Fiction" },
+                new Category { ID = 2, Name = "Action" },
+                new Category { ID = 3, Name = "Crime" },
+                new Category { ID = 4, Name = "Adventure" },
+                new Category { ID = 5, Name = "Drama" },
+                new Category { ID = 6, Name = "Fantasy" },
+                new Category { ID = 7, Name = "Thriller" },
+                new Category { ID = 8, Name = "General" },
+                new Category { ID = 9, Name = "Horror" },
+                new Category { ID = 10, Name = "Comedy" },
+                new Category { ID = 11, Name = "Uncategorised" }
+             );
             #endregion
+
             #region Author
             modelBuilder.Entity<Author>().HasData(
             new Author
@@ -58,16 +48,15 @@ namespace BookStore.Data
                 ID = 1,
                 Name = "Agatha Christie",
                 ShortDiscription = "Dame Agatha Mary Clarissa Christie, Lady Mallowan, DBE (née Miller; 15 September 1890 – 12 January 1976) " +
-                    "was an English writer known for her 66 detective novels and 14 short story collections, particularly those revolving around " +
-                    "fictional detectives Hercule Poirot and Miss Marple. She also wrote the world's longest-running play The Mousetrap and " +
-                    "six romances under the pen name Mary Westmacott. In 1971, she was appointed a Dame Commander of the Order of the British Empire " +
-                    "(DBE) for her contribution to literature",
+                   "was an English writer known for her 66 detective novels and 14 short story collections, particularly those revolving around " +
+                   "fictional detectives Hercule Poirot and Miss Marple. She also wrote the world's longest-running play The Mousetrap and " +
+                   "six romances under the pen name Mary Westmacott. In 1971, she was appointed a Dame Commander of the Order of the British Empire " +
+                   "(DBE) for her contribution to literature",
                 Popularity = false,
                 Country = "Country1",
                 Gender = "Female",
                 DateBirth = DateTime.Now,
                 Language = "English"
-
             },
                 new Author
                 {
@@ -89,7 +78,7 @@ namespace BookStore.Data
                     ID = 3,
                     Name = "William Shakespeare",
                     ShortDiscription = "William Shakespeare (bapt. 26 April 1564 – 23 April 1616) was an English poet, playwright, and actor, " +
-                    "widely regarded as the greatest writer in the English language and the world's greatest dramatist. He is often called England's " +
+                    "wIDely regarded as the greatest writer in the English language and the world's greatest dramatist. He is often called England's " +
                     "national poet and the \"Bard of Avon\" (or simply \"the Bard\"). His extant works, including collaborations, consist of some " +
                     "39 plays, 154 sonnets, two long narrative poems, and a few other verses, some of uncertain authorship. " +
                     "His plays have been translated into every major living language and are performed more often than those of any other playwright",
@@ -143,8 +132,8 @@ namespace BookStore.Data
                     ID = 7,
                     Name = "Jeffrey Archer",
                     ShortDiscription = "Jeffrey Howard Archer (born 15 April 1940) is an English novelist, former politician, convicted perjurer, and peer of the realm. " +
-                    "Before becoming an author,Archer was a Member of Parliament(1969–1974), but did not seek re - election after a financial scandal that left him almost bankrupt." +
-                    "He revived his fortunes as a best - selling novelist; his books have sold around 330 million copies worldwide",
+                    "Before becoming an author,Archer was a Member of Parliament(1969–1974), but dID not seek re - election after a financial scandal that left him almost bankrupt." +
+                    "He revived his fortunes as a best - selling novelist; his books have sold around 330 million copies worldwIDe",
                     Popularity = false,
                     Country = "Country7",
                     Gender = "Male",
@@ -193,10 +182,11 @@ namespace BookStore.Data
                     Gender = "Male",
                     DateBirth = DateTime.Now,
                     Language = "English"
-                });
-
+                }
+            );
             #endregion
-            #region Publisher
+
+            #region Publihser
             modelBuilder.Entity<Publisher>().HasData(
                 new Publisher
                 {
@@ -270,271 +260,672 @@ namespace BookStore.Data
                 }
             );
             #endregion
+
             #region Books
             modelBuilder.Entity<Book>().HasData(
-                new Book
-                {
-                    ID = 1,
-                    Title = "Murder On The Orient Express",
-                    AuthorID = 1,
-                    AuthorName = "Agatha Cristie",
-                    BookType = "Paperback",
-                    CategoryID = 1,
-                    CategoryName = "Fiction",
-                    Copies = 100,
-                    Country = "UK",
-                    Discription = "Book seed 1 Description",
-                    Dimension = "12x12x20",
-                    Genre = "Fiction",
-                    Edition = 1,
-                    Language = "English",
-                    NumberOfPages = 586,
-                    Price = 9.99,
-                    PublisherID = 1,
-                    PublisherName = "William Morrow Paperbacks",
-                    Shipping = "Free",
-                    Weight = 0.49,
-                    YearOfIssue = new DateTime(2020, 02, 29, 23, 29, 25),
-                    PhotoURL = "AgathaCristie_MurderOnTheOrientExpress.jpg",
-                    SoldItems = 20,
-                    DateAdded = DateTime.Now,
-                    Rating = 3.5,
-                    BookCoverType = "Paper",
-                    UserID = 1
-                },
-                new Book
-                {
-                    ID = 2,
-                    Title = "The Dark Tower I: The Gunslinger",
-                    AuthorID = 2,
-                    AuthorName = "Stephen King",
-                    BookType = "Paperback",
-                    CategoryID = 6,
-                    CategoryName = "Fantasy",
-                    Copies = 50,
-                    Country = "",
-                    Discription = "Now a major motion picture starring Matthew McConaughey and Idris Elba. " +
-                    "An impressive work of mythic magnitude that may turn out to be Stephen King's greatest literary " +
-                    "achievement (The Atlanta Journal-Constitution), The Gunslinger is the first volume in the epic Dark Tower Series. " +
-                    "A #1 national bestseller, The Gunslinger introduces readers to one of Stephen King's most powerful creations, " +
-                    "Roland of Gilead: The Last Gunslinger. He is a haunting figure, a loner on a spellbinding journey into good and evil. " +
-                    "In his desolate world, which mirrors our own in frightening ways, Roland tracks The Man in Black, encounters an enticing " +
-                    "woman named Alice, and begins a friendship with the boy from New York named Jake. Inspired in part by the Robert Browning narrative poem," +
-                    "Childe Roland to the Dark Tower Came, The Gunslinger is a compelling whirlpool of a story that draws one irretrievable to its center ( Milwaukee Sentinel ). " +
-                    "It is brilliant and fresh...and will leave you panting for more ( Booklist ).",
-                    Dimension = "Not known",
-                    Genre = "Fantasy",
-                    Edition = 1,
-                    Language = "English",
-                    NumberOfPages = 586,
-                    Price = 11.48,
-                    PublisherID = 2,
-                    PublisherName = "Scholastic",
-                    Shipping = "Free",
-                    Weight = 0.60,
-                    YearOfIssue = new DateTime(2017, 06, 13, 00, 00, 00),
-                    PhotoURL = "StephenKing_The_Dark_Tower.jpg",
-                    SoldItems = 19,
-                    DateAdded = DateTime.Now,
-                    Rating = 3.5,
-                    BookCoverType = "Paper",
-                    UserID = 1
-                },
-                new Book
-                {
-                    ID = 3,
-                    Title = "Dreamcatcher",
-                    AuthorID = 2,
-                    AuthorName = "Stephen King",
-                    BookType = "Paperback",
-                    CategoryID = 9,
-                    CategoryName = "Horror",
-                    Copies = 20,
-                    Country = "USA",
-                    Discription = "Once upon a time, in the haunted city of Derry (site of the classics \"It\" and \"Insomnia),\" four boys stood together " +
-                    "and did a brave thing. Certainly a good thing, perhaps even a great thing. Something that changed them in ways they could never begin to understand. " +
-                    "Twenty - five years later, the boys are now men with separate lives and separate troubles. But the ties endure. " +
-                    "Each hunting season the foursome reunite in the woods of Maine. This year, a stranger stumbles into their camp, disoriented, " +
-                    "mumbling something about lights in the sky. His incoherent ravings prove to be dis - turbingly prescient.Before long, these men will be plunged into a " +
-                    "horrifying struggle with a creature from another world. Their only chance of survival is locked in their shared past-- and in the Dreamcatcher.",
-                    Dimension = "6.51 x 9.56 x 2.01 inches",
-                    Genre = "Horror",
-                    Edition = 1,
-                    Language = "English",
-                    NumberOfPages = 624,
-                    Price = 13.98,
-                    PublisherID = 7,
-                    PublisherName = "Simon & Schuster",
-                    Shipping = "Free",
-                    Weight = 2.22,
-                    YearOfIssue = new DateTime(2020, 02, 29, 23, 29, 25),
-                    PhotoURL = "StephenKing_Dreamcatcher.jpg",
-                    SoldItems = 3,
-                    DateAdded = DateTime.Now,
-                    Rating = 3.5,
-                    BookCoverType = "Paper",
-                    UserID = 1
-
-                },
-                new Book
-                {
-                    ID = 4,
-                    Title = "The Green Mile",
-                    AuthorID = 2,
-                    AuthorName = "Stephen King",
-                    BookType = "Paperback",
-                    CategoryID = 8,
-                    CategoryName = "General",
-                    Copies = 150,
-                    Country = "USA",
-                    Discription = "Stephen King's international bestselling - and highly acclaimed - novel, also a hugely successful film starring Tom Hanks",
-                    Dimension = "5.12 x 7.80 x 1.22 inches",
-                    Genre = "Drama",
-                    Edition = 1,
-                    Language = "English",
-                    NumberOfPages = 480,
-                    Price = 23.98,
-                    PublisherID = 9,
-                    PublisherName = "Houghton Mifflin Harcourt",
-                    Shipping = "Free",
-                    Weight = 0.49,
-                    YearOfIssue = new DateTime(2005, 03, 24, 00, 00, 00),
-                    PhotoURL = "StephenKing-The-Green-Mile.jpg",
-                    SoldItems = 4,
-                    DateAdded = DateTime.Now,
-                    Rating = 3.5,
-                    BookCoverType = "Paper",
-                    UserID = 1
-                },
-                new Book
-                {
-                    ID = 5,
-                    Title = "Insomnia",
-                    AuthorID = 2,
-                    AuthorName = "Stephen King",
-                    BookType = "Paperback",
-                    CategoryID = 9,
-                    CategoryName = "Horror",
-                    Copies = 200,
-                    Country = "USA",
-                    Discription = "Old Ralph Roberts hasn't been sleeping well lately. Every night he wakes just a little bit earlier, and pretty soon, he thinks, " +
-                    "he won't get any sleep at all. It wouldn't be so bad, except for the strange hallucinations he's been having. " +
-                    "Or, at least, he hopes they are hallucinations--because here in Derry, one never can tell. Part of the \"Books That Take You Anywhere You Want To Go\" " +
-                    "Summer Reading Promotion.",
-                    Dimension = "4.21 x 6.93 x 1.51 inches",
-                    Genre = "Horror",
-                    Edition = 1,
-                    Language = "English",
-                    NumberOfPages = 663,
-                    Price = 12.98,
-                    PublisherID = 5,
-                    PublisherName = "HarperCollins",
-                    Shipping = "Free",
-                    Weight = 0.70,
-                    YearOfIssue = new DateTime(1995, 09, 01, 00, 00, 00),
-                    PhotoURL = "StephenKing_Insomnia.jpg",
-                    SoldItems = 5,
-                    DateAdded = DateTime.Now,
-                    Rating = 3.5,
-                    BookCoverType = "Paper",
-                    UserID = 1
-                },
-                new Book
-                {
-                    ID = 6,
-                    Title = "The Shining",
-                    AuthorID = 2,
-                    AuthorName = "Stephen King",
-                    BookType = "Paperback",
-                    CategoryID = 7,
-                    CategoryName = "Thrillers",
-                    Copies = 40,
-                    Country = "USA",
-                    Discription = "Evil forces try to destroy a boy with psychic powers.",
-                    Dimension = "6.44 x 9.42 x 1.46 inches",
-                    Genre = "Thriller",
-                    Edition = 1,
-                    Language = "English",
-                    NumberOfPages = 450,
-                    Price = 33.48,
-                    PublisherID = 5,
-                    PublisherName = "HarperCollins",
-                    Shipping = "Free",
-                    Weight = 1.68,
-                    YearOfIssue = new DateTime(1990, 06, 01, 00, 00, 00),
-                    PhotoURL = "StephenKing_The-Shining.jpg",
-                    SoldItems = 6,
-                    DateAdded = DateTime.Now,
-                    Rating = 3.5,
-                    BookCoverType = "Paper",
-                    UserID = 1
-                },
-                new Book
-                {
-                    ID = 7,
-                    Title = "Desperation",
-                    AuthorID = 2,
-                    AuthorName = "Stephen King",
-                    BookType = "Paperback",
-                    CategoryID = 9,
-                    CategoryName = "Horror",
-                    Copies = 230,
-                    Country = "USA",
-                    Discription = "Now repackaged with stunning new cover art, this #1 bestseller is a chilling story set in a lonely Nevada town " +
-                    "where the evil embedded in the landscape is awesome--but so are the forces summoned to combat it. Reissue",
-                    Dimension = "4.22 x 6.86 x 1.52 inches",
-                    Genre = "Horror",
-                    Edition = 1,
-                    Language = "English",
-                    NumberOfPages = 547,
-                    Price = 22.98,
-                    PublisherID = 10,
-                    PublisherName = "Pearson Education",
-                    Shipping = "Free",
-                    Weight = 0.49,
-                    YearOfIssue = new DateTime(2003, 04, 01, 00, 00, 00),
-                    PhotoURL = "StephenKing_Desperation.jpg",
-                    SoldItems = 7,
-                    DateAdded = DateTime.Now,
-                    Rating = 3.5,
-                    BookCoverType = "Paper",
-                    UserID = 1
-                },
-                new Book
-                {
-                    ID = 8,
-                    Title = "Othello",
-                    AuthorID = 3,
-                    AuthorName = "William Shakespeare",
-                    BookType = "Paperback",
-                    CategoryID = 5,
-                    CategoryName = "Drama",
-                    Copies = 65,
-                    Country = "UK",
-                    Discription = "Shakespeare's tragedy about Othello the Moor is presented in this freshly edited text with full explanatory notes, " +
-                    "scene-by-scene plot summaries, an Introduction to reading Shakespeare's language, and much more. Reissue.",
-                    Dimension = "4.10 x 6.70 x 1.00 inches",
-                    Genre = "Drama",
-                    Edition = 1,
-                    Language = "English",
-                    NumberOfPages = 368,
-                    Price = 5.98,
-                    PublisherID = 7,
-                    PublisherName = "Simon & Schuster",
-                    Shipping = "Free",
-                    Weight = 0.40,
-                    YearOfIssue = new DateTime(2003, 12, 23, 00, 00, 00),
-                    PhotoURL = "WilliamShakespeare_Othello.jpg",
-                    SoldItems = 5,
-                    DateAdded = DateTime.Now,
-                    Rating = 3.5,
-                    BookCoverType = "Paper",
-                    UserID = 1
-                }
-                );
+               new Book
+               {
+                   ID = 1,
+                   Title = "Murder On The Orient Express",
+                   AuthorID = 1,
+                   AuthorName = "Agatha Cristie",
+                   BookType = "Paperback",
+                   CategoryID = 1,
+                   CategoryName = "Fiction",
+                   Copies = 100,
+                   Country = "UK",
+                   Discription = "Book seed 1 Discription",
+                   Dimension = "12x12x20",
+                   Genre = "Fiction",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 586,
+                   Price = 9.99,
+                   PublisherID = 1,
+                   PublisherName = "William Morrow Paperbacks",
+                   Shipping = "Free",
+                   Weight = 0.49,
+                   YearOfIssue = new DateTime(2020, 02, 29, 23, 29, 25),
+                   PhotoURL = "AgathaCristie_MurderOnTheOrientExpress.jpg",
+                   SoldItems = 20,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 2,
+                   Title = "The Dark Tower I: The Gunslinger",
+                   AuthorID = 2,
+                   AuthorName = "Stephen King",
+                   BookType = "Paperback",
+                   CategoryID = 6,
+                   CategoryName = "Fantasy",
+                   Copies = 50,
+                   Country = "",
+                   Discription = "Now a major motion picture starring Matthew McConaughey and IDris Elba. " +
+                   "An impressive work of mythic magnitude that may turn out to be Stephen King's greatest literary " +
+                   "achievement (The Atlanta Journal-Constitution), The Gunslinger is the first volume in the epic Dark Tower Series. " +
+                   "A #1 national bestseller, The Gunslinger introduces readers to one of Stephen King's most powerful creations, " +
+                   "Roland of Gilead: The Last Gunslinger. He is a haunting figure, a loner on a spellbinding journey into good and evil. " +
+                   "In his desolate world, which mirrors our own in frightening ways, Roland tracks The Man in Black, encounters an enticing " +
+                   "woman named Alice, and begins a friendship with the boy from New York named Jake. Inspired in part by the Robert Browning narrative poem," +
+                   "Childe Roland to the Dark Tower Came, The Gunslinger is a compelling whirlpool of a story that draws one irretrievable to its center ( Milwaukee Sentinel ). " +
+                   "It is brilliant and fresh...and will leave you panting for more ( Booklist ).",
+                   Dimension = "Not known",
+                   Genre = "Fantasy",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 586,
+                   Price = 11.48,
+                   PublisherID = 2,
+                   PublisherName = "Scholastic",
+                   Shipping = "Free",
+                   Weight = 0.60,
+                   YearOfIssue = new DateTime(2017, 06, 13, 00, 00, 00),
+                   PhotoURL = "StephenKing_The_Dark_Tower.jpg",
+                   SoldItems = 19,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 3,
+                   Title = "Dreamcatcher",
+                   AuthorID = 2,
+                   AuthorName = "Stephen King",
+                   BookType = "Paperback",
+                   CategoryID = 9,
+                   CategoryName = "Horror",
+                   Copies = 20,
+                   Country = "USA",
+                   Discription = "Once upon a time, in the haunted city of Derry (site of the classics \"It\" and \"Insomnia),\" four boys stood together " +
+                   "and dID a brave thing. Certainly a good thing, perhaps even a great thing. Something that changed them in ways they could never begin to understand. " +
+                   "Twenty - five years later, the boys are now men with separate lives and separate troubles. But the ties endure. " +
+                   "Each hunting season the foursome reunite in the woods of Maine. This year, a stranger stumbles into their camp, disoriented, " +
+                   "mumbling something about lights in the sky. His incoherent ravings prove to be dis - turbingly prescient.Before long, these men will be plunged into a " +
+                   "horrifying struggle with a creature from another world. Their only chance of survival is locked in their shared past-- and in the Dreamcatcher.",
+                   Dimension = "6.51 x 9.56 x 2.01 inches",
+                   Genre = "Horror",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 624,
+                   Price = 13.98,
+                   PublisherID = 7,
+                   PublisherName = "Simon & Schuster",
+                   Shipping = "Free",
+                   Weight = 2.22,
+                   YearOfIssue = new DateTime(2020, 02, 29, 23, 29, 25),
+                   PhotoURL = "StephenKing_Dreamcatcher.jpg",
+                   SoldItems = 3,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 4,
+                   Title = "The Green Mile",
+                   AuthorID = 2,
+                   AuthorName = "Stephen King",
+                   BookType = "Paperback",
+                   CategoryID = 8,
+                   CategoryName = "General",
+                   Copies = 150,
+                   Country = "USA",
+                   Discription = "Stephen King's international bestselling - and highly acclaimed - novel, also a hugely successful film starring Tom Hanks",
+                   Dimension = "5.12 x 7.80 x 1.22 inches",
+                   Genre = "Drama",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 480,
+                   Price = 23.98,
+                   PublisherID = 9,
+                   PublisherName = "Houghton Mifflin Harcourt",
+                   Shipping = "Free",
+                   Weight = 0.49,
+                   YearOfIssue = new DateTime(2005, 03, 24, 00, 00, 00),
+                   PhotoURL = "StephenKing-The-Green-Mile.jpg",
+                   SoldItems = 4,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 5,
+                   Title = "Insomnia",
+                   AuthorID = 2,
+                   AuthorName = "Stephen King",
+                   BookType = "Paperback",
+                   CategoryID = 9,
+                   CategoryName = "Horror",
+                   Copies = 200,
+                   Country = "USA",
+                   Discription = "Old Ralph Roberts hasn't been sleeping well lately. Every night he wakes just a little bit earlier, and pretty soon, he thinks, " +
+                   "he won't get any sleep at all. It wouldn't be so bad, except for the strange hallucinations he's been having. " +
+                   "Or, at least, he hopes they are hallucinations--because here in Derry, one never can tell. Part of the \"Books That Take You Anywhere You Want To Go\" " +
+                   "Summer Reading Promotion.",
+                   Dimension = "4.21 x 6.93 x 1.51 inches",
+                   Genre = "Horror",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 663,
+                   Price = 12.98,
+                   PublisherID = 5,
+                   PublisherName = "HarperCollins",
+                   Shipping = "Free",
+                   Weight = 0.70,
+                   YearOfIssue = new DateTime(1995, 09, 01, 00, 00, 00),
+                   PhotoURL = "StephenKing_Insomnia.jpg",
+                   SoldItems = 5,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 6,
+                   Title = "The Shining",
+                   AuthorID = 2,
+                   AuthorName = "Stephen King",
+                   BookType = "Paperback",
+                   CategoryID = 7,
+                   CategoryName = "Thrillers",
+                   Copies = 40,
+                   Country = "USA",
+                   Discription = "Evil forces try to destroy a boy with psychic powers.",
+                   Dimension = "6.44 x 9.42 x 1.46 inches",
+                   Genre = "Thriller",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 450,
+                   Price = 33.48,
+                   PublisherID = 5,
+                   PublisherName = "HarperCollins",
+                   Shipping = "Free",
+                   Weight = 1.68,
+                   YearOfIssue = new DateTime(1990, 06, 01, 00, 00, 00),
+                   PhotoURL = "StephenKing_The-Shining.jpg",
+                   SoldItems = 6,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 7,
+                   Title = "Desperation",
+                   AuthorID = 2,
+                   AuthorName = "Stephen King",
+                   BookType = "Paperback",
+                   CategoryID = 9,
+                   CategoryName = "Horror",
+                   Copies = 230,
+                   Country = "USA",
+                   Discription = "Now repackaged with stunning new cover art, this #1 bestseller is a chilling story set in a lonely Nevada town " +
+                   "where the evil embedded in the landscape is awesome--but so are the forces summoned to combat it. Reissue",
+                   Dimension = "4.22 x 6.86 x 1.52 inches",
+                   Genre = "Horror",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 547,
+                   Price = 22.98,
+                   PublisherID = 10,
+                   PublisherName = "Pearson Education",
+                   Shipping = "Free",
+                   Weight = 0.49,
+                   YearOfIssue = new DateTime(2003, 04, 01, 00, 00, 00),
+                   PhotoURL = "StephenKing_Desperation.jpg",
+                   SoldItems = 7,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 8,
+                   Title = "Othello",
+                   AuthorID = 3,
+                   AuthorName = "William Shakespeare",
+                   BookType = "Paperback",
+                   CategoryID = 5,
+                   CategoryName = "Drama",
+                   Copies = 65,
+                   Country = "UK",
+                   Discription = "Shakespeare's tragedy about Othello the Moor is presented in this freshly edited text with full explanatory notes, " +
+                   "scene-by-scene plot summaries, an Introduction to reading Shakespeare's language, and much more. Reissue.",
+                   Dimension = "4.10 x 6.70 x 1.00 inches",
+                   Genre = "Drama",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 368,
+                   Price = 5.98,
+                   PublisherID = 7,
+                   PublisherName = "Simon & Schuster",
+                   Shipping = "Free",
+                   Weight = 0.40,
+                   YearOfIssue = new DateTime(2003, 12, 23, 00, 00, 00),
+                   PhotoURL = "WilliamShakespeare_Othello.jpg",
+                   SoldItems = 18,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 9,
+                   Title = "Harry Potter and the Philosopher's Stone",
+                   AuthorID = 4,
+                   AuthorName = "J. K. Rowling",
+                   BookType = "Paperback",
+                   CategoryID = 1,
+                   CategoryName = "Fiction",
+                   Copies = 131,
+                   Country = "UK",
+                   Discription = "The one that started the biggest publishing phenomenon of our time",
+                   Dimension = "4.45 x 7.01 x 0.87 inches",
+                   Genre = "Fiction",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 336,
+                   Price = 9.98,
+                   PublisherID = 1,
+                   PublisherName = "William Morrow Paperbacks",
+                   Shipping = "Free",
+                   Weight = 0.35,
+                   YearOfIssue = new DateTime(2004, 07, 10, 00, 00, 00),
+                   PhotoURL = "Harry-Potter-and-the-Philosopher-s-Stone-Rowling-J-K.jpg",
+                   SoldItems = 17,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 10,
+                   Title = "The Alchemist",
+                   AuthorID = 6,
+                   AuthorName = "Paulo Coelho",
+                   BookType = "Paperback",
+                   CategoryID = 1,
+                   CategoryName = "Fiction",
+                   Copies = 222,
+                   Country = "UK",
+                   Discription = "This international bestseller about the shepherd boy Santiago who learns how to live " +
+                   "his dreams includes an inspiring afterword by the author.",
+                   Dimension = "5.36 x 8.02 x 0.56 inches",
+                   Genre = "Fiction",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 197,
+                   Price = 6.98,
+                   PublisherID = 1,
+                   PublisherName = "William Morrow Paperbacks",
+                   Shipping = "Free",
+                   Weight = 0.49,
+                   YearOfIssue = new DateTime(2006, 04, 25, 00, 00, 00),
+                   PhotoURL = "PauloCoelho_The-Alchemist.jpg",
+                   SoldItems = 16,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 11,
+                   Title = "Eleven Minutes",
+                   AuthorID = 6,
+                   AuthorName = "Paulo Coelho",
+                   BookType = "Paperback",
+                   CategoryID = 1,
+                   CategoryName = "Fiction",
+                   Copies = 34,
+                   Country = "USA",
+                   Discription = "This gripping and daring novel by the author of the bestselling \"The Alchemist\" sensitively " +
+                   "explores the sacred nature of sex and love. \"Sensual. . . for-adults - only fairytale.\"--\"Washington Post.\"",
+                   Dimension = "5.32 x 8.04 x 0.77 inches",
+                   Genre = "Fiction",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 320,
+                   Price = 12.48,
+                   PublisherID = 5,
+                   PublisherName = "HarperCollins",
+                   Shipping = "Free",
+                   Weight = 0.52,
+                   YearOfIssue = new DateTime(2005, 03, 29, 00, 00, 00),
+                   PhotoURL = "PauloCoelho_Eleven-Minutes.jpg",
+                   SoldItems = 8,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 12,
+                   Title = "Best Kept Secret (The Clifton Chronicles)",
+                   AuthorID = 7,
+                   AuthorName = "Jeffrey Archer",
+                   BookType = "Paperback",
+                   CategoryID = 1,
+                   CategoryName = "Fiction",
+                   Copies = 87,
+                   Country = "USA",
+                   Discription = "Jeffrey Archer's mesmerizing saga of the Clifton and Barrington families continues... " +
+                   "1945, London. The vote in the House of Lords as to who should inherit the Barrington family fortune has " +
+                   "ended in a tie. The Lord Chancellor's decIDing vote will cast a long shadow on the lives of Harry Clifton " +
+                   "and Giles Barrington. Harry returns to America to promote his latest novel, while his beloved Emma goes in " +
+                   "search of the little girl who was found abandoned in her father's office on the night he was killed. " +
+                   "When the general election is called, Giles Barrington has to defend his seat in the House of Commons and " +
+                   "is horrified to discover who the Conservatives select to stand against him. But it is Sebastian Clifton, " +
+                   "Harry and Emma's son, who ultimately influences his uncle's fate. In 1957, Sebastian wins a scholarship to " +
+                   "CambrIDge, and a new generation of the Clifton family marches onto the page. But after Sebastian is expelled " +
+                   "from school, he unwittingly becomes caught up in an international art fraud involving a Rodin statue that is " +
+                   "worth far more than the sum it raises at auction. Does he become a millionaire? Does he go to CambrIDge? " +
+                   "Is his life in danger?",
+                   Dimension = "4.32 x 6.04 x 0.57 inches",
+                   Genre = "Fiction",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 423,
+                   Price = 14.48,
+                   PublisherID = 4,
+                   PublisherName = "Hachette Livre",
+                   Shipping = "Free",
+                   Weight = 0.57,
+                   YearOfIssue = new DateTime(2014, 02, 18, 00, 00, 00),
+                   PhotoURL = "ArcherJeffrey-Best-Kept-Secret.jpg",
+                   SoldItems = 9,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 13,
+                   Title = "Casino Royale",
+                   AuthorID = 8,
+                   AuthorName = "Ian Fleming",
+                   BookType = "Paperback",
+                   CategoryID = 2,
+                   CategoryName = "Action",
+                   Copies = 122,
+                   Country = "UK",
+                   Discription = "In the novel that introduced James Bond to the world, Ian Fleming's agent 007 is dispatched to " +
+                   "a French casino in Royale-les-Eaux. His mission? Bankrupt a ruthless Russian agent who's been on a bad luck streak " +
+                   "at the baccarat table. One of SMERSH's most deadly operatives, the man known only as ?Le Chiffre, ? has been a prime " +
+                   "target of the British Secret Service for years. If Bond can wipe out his bankroll, Le Chiffre will likely be ?retired? " +
+                   "by his paymasters in Moscow. But what if the cards won't cooperate? After a brutal night at the gaming tables, " +
+                   "Bond soon finds himself dodging would-be assassins, fighting off brutal torturers, and going all-in to save the life " +
+                   "of his beautiful female counterpart, Vesper Lynd. Taut, tense, and effortlessly stylish, Ian Fleming's inaugural " +
+                   "James Bond adventure has all the hallmarks that made the series a touchstone for a generation of readers.",
+                   Dimension = "4.32 x 6.04 x 0.57 inches",
+                   Genre = "Action",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 486,
+                   Price = 13.48,
+                   PublisherID = 3,
+                   PublisherName = "Penguin Random House",
+                   Shipping = "Free",
+                   Weight = 0.30,
+                   YearOfIssue = new DateTime(2012, 10, 16, 00, 00, 00),
+                   PhotoURL = "IanFlemming_Casino_Royale.jpg",
+                   SoldItems = 15,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 14,
+                   Title = "From Russia with Love",
+                   AuthorID = 8,
+                   AuthorName = "Ian Fleming",
+                   BookType = "Paperback",
+                   CategoryID = 2,
+                   CategoryName = "Action",
+                   Copies = 10,
+                   Country = "UK",
+                   Discription = "The lethal SMERSH organization in Russia has targeted Agent 007 for elimination. " +
+                   "But when James Bond allows himself to be lured to Istanbul and walks willingly into a trap, " +
+                   "a game of cross and double-cross ensues, with Bond as both the stakes and the prize.",
+                   Dimension = "5.12 x 7.72 x 0.53 inches",
+                   Genre = "Action",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 272,
+                   Price = 6.48,
+                   PublisherID = 3,
+                   PublisherName = "Penguin Random House",
+                   Shipping = "Free",
+                   Weight = 0.42,
+                   YearOfIssue = new DateTime(2002, 12, 31, 00, 00, 00),
+                   PhotoURL = "IanFleming_From-Russia-with-Love.jpg",
+                   SoldItems = 14,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 15,
+                   Title = "Every Breath",
+                   AuthorID = 9,
+                   AuthorName = "Nicholas Sparks",
+                   BookType = "Paperback",
+                   CategoryID = 1,
+                   CategoryName = "Fiction",
+                   Copies = 37,
+                   Country = "UK",
+                   Discription = "No Discription is available.",
+                   Dimension = "4.10 x 6.70 x 1.00 inches",
+                   Genre = "Romance",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 463,
+                   Price = 8.98,
+                   PublisherID = 4,
+                   PublisherName = "Hachette Livre",
+                   Shipping = "Free",
+                   Weight = 0.50,
+                   YearOfIssue = new DateTime(2010, 03, 01, 00, 00, 00),
+                   PhotoURL = "NicolasSparks_Every13Breath.jpg",
+                   SoldItems = 13,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 16,
+                   Title = "The Last Song",
+                   AuthorID = 9,
+                   AuthorName = "Nicholas Sparks",
+                   BookType = "Paperback",
+                   CategoryID = 1,
+                   CategoryName = "Fiction",
+                   Copies = 44,
+                   Country = "UK",
+                   Discription = "#1 bestselling author Nicholas Sparks's new novel is at once a compelling family drama and a heartrending " +
+                   "tale of young love.Seventeen year old Veronica \"Ronnie\" Miller's life was turned upsIDe-down when her parents divorced " +
+                   "and her father moved from New York City to Wilmington, North Carolina. Three years later, she remains angry and alientated " +
+                   "from her parents, especially her father...until her mother decIDes it would be in everyone's best interest if she spent " +
+                   "the summer in Wilmington with him. Ronnie's father, a former concert pianist and teacher, is living a quiet life in the " +
+                   "beach town, immersed in creating a work of art that will become the centerpiece of a local church.The tale that unfolds is " +
+                   "an unforgettable story of love on many levels--first love, love between parents and children -- that demonstrates, " +
+                   "as only a Nicholas Sparks novel can, the many ways that love can break our hearts...and heal them.",
+                   Dimension = "4.10 x 6.70 x 1.00 inches",
+                   Genre = "Romance",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 463,
+                   Price = 8.98,
+                   PublisherID = 4,
+                   PublisherName = "Hachette Livre",
+                   Shipping = "Free",
+                   Weight = 0.50,
+                   YearOfIssue = new DateTime(2010, 03, 01, 00, 00, 00),
+                   PhotoURL = "NicolasSparks_The-Last-Song.jpg",
+                   SoldItems = 10,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 17,
+                   Title = "The Da Vinci Code",
+                   AuthorID = 10,
+                   AuthorName = "Dan Brown",
+                   BookType = "Paperback",
+                   CategoryID = 7,
+                   CategoryName = "Thrillers",
+                   Copies = 111,
+                   Country = "USA",
+                   Discription = "PREMIUM MASS MARKET EDITION #1 WorldwIDe Bestseller" +
+                   "--More Than 80 Million Copies Sold As millions of readers around the globe have already discovered, " +
+                   "The Da Vinci Code is a reading experience unlike any other.Simultaneously lightning - paced, intelligent," +
+                   "and intricately layered with remarkable research and detail, Dan Brown's novel is a thrilling masterpiece" +
+                   "--from its opening pages to its stunning conclusion.",
+                   Dimension = "4.28 x 7.54 x 1.33 inches",
+                   Genre = "Thriller",
+                   Edition = 2,
+                   Language = "English",
+                   NumberOfPages = 608,
+                   Price = 12.98,
+                   PublisherID = 6,
+                   PublisherName = "Macmillan Publishers",
+                   Shipping = "Free",
+                   Weight = 0.49,
+                   YearOfIssue = new DateTime(2009, 03, 31, 00, 00, 00),
+                   PhotoURL = "Dan-Brown_The-Da-Vinci-Code.jpg",
+                   SoldItems = 12,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 18,
+                   Title = "Inferno",
+                   AuthorID = 10,
+                   AuthorName = "Dan Brown",
+                   BookType = "Paperback",
+                   CategoryID = 7,
+                   CategoryName = "Thrillers",
+                   Copies = 100,
+                   Country = "USA",
+                   Discription = "#1 WORLDWIDE BESTSELLER Harvard professor of symbology Robert Langdon awakens in an Italian hospital, " +
+                   "disoriented and with no recollection of the past thirty-six hours, including the origin of the macabre object hIDden " +
+                   "in his belongings. With a relentless female assassin trailing them through Florence, he and his resourceful doctor, " +
+                   "Sienna Brooks, are forced to flee. Embarking on a harrowing journey, they must unravel a series of codes, which are " +
+                   "the work of a brilliant scientist whose obsession with the end of the world is matched only by his passion for one of the " +
+                   "most influential masterpieces ever written, Dante Alighieri's \"The Inferno.\" Dan Brown has raised the bar yet again, " +
+                   "combining classical Italian art, history, and literature with cutting-edge science in this sumptuously entertaining thriller.",
+                   Dimension = "4.28 x 7.54 x 1.33 inches",
+                   Genre = "Thriller",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 648,
+                   Price = 5.98,
+                   PublisherID = 6,
+                   PublisherName = "Macmillan Publishers",
+                   Shipping = "Free",
+                   Weight = 0.50,
+                   YearOfIssue = new DateTime(2014, 06, 06, 00, 00, 00),
+                   PhotoURL = "Dan-Brown_Inferno.jpg",
+                   SoldItems = 11,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 19,
+                   Title = "The Thirteen Problems",
+                   AuthorID = 1,
+                   AuthorName = "Agatha Christie",
+                   BookType = "Paperback",
+                   CategoryID = 7,
+                   CategoryName = "Thrillers",
+                   Copies = 300,
+                   Country = "UK",
+                   Discription = "No Discription is available.",
+                   Dimension = "5.82 x 8.52 x 0.94 inches",
+                   Genre = "Thriller",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 256,
+                   Price = 17.48,
+                   PublisherID = 7,
+                   PublisherName = "Simon & Schuster",
+                   Shipping = "Free",
+                   Weight = 0.35,
+                   YearOfIssue = new DateTime(2016, 01, 01, 00, 00, 00),
+                   PhotoURL = "AgathaCristie_13_Problems.jpg",
+                   SoldItems = 11,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               },
+               new Book
+               {
+                   ID = 20,
+                   Title = "The A.B.C. Murders",
+                   AuthorID = 1,
+                   AuthorName = "Agatha Christie",
+                   BookType = "Paperback",
+                   CategoryID = 7,
+                   CategoryName = "Thrillers",
+                   Copies = 70,
+                   Country = "UK",
+                   Discription = "When Alice Ascher is murdered in Andover, Hercule Poirot is already onto the clues. " +
+                   "Alphabetically speaking, it's one down, 25 to go. This classic mystery is now repackaged in a digest-sized " +
+                   "edition for young adults. Reissue.",
+                   Dimension = "5.82 x 8.52 x 0.94 inches",
+                   Genre = "Thriller",
+                   Edition = 1,
+                   Language = "English",
+                   NumberOfPages = 256,
+                   Price = 8.48,
+                   PublisherID = 7,
+                   PublisherName = "Simon & Schuster",
+                   Shipping = "Free",
+                   Weight = 0.99,
+                   YearOfIssue = new DateTime(2006, 09, 30, 00, 00, 00),
+                   PhotoURL = "AgathaCristie_TheABCMurders.jpg",
+                   SoldItems = 11,
+                   DateAdded = DateTime.Now,
+                   Rating = 3.5,
+                   BookCoverType = "Paper",
+                   UserID = 1
+               }
+            );
             #endregion
 
-                    base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

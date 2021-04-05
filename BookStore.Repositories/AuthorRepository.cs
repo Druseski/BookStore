@@ -1,6 +1,8 @@
 ﻿using BookStore.Data;
 using BookStore.Entities;
+using BookStore.Entities.Loger;
 using BookStore.Repositories.Interfaces;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,30 +12,40 @@ namespace BookStore.Repositories
 {
     public class AuthorRepository : IAuthorRepository
     {
+        private readonly ILogger<BookRepository> _logger;
         private readonly DataContext _context;
 
         public AuthorRepository(DataContext context)
         {
             _context = context;
+       
         }
 
         public void AddAuthor(Author author)
         {
-            _context.Authors.Add(author);
-            _context.SaveChanges();
+        
+                _context.Authors.Add(author);
+                _context.SaveChanges();
+    
         }
 
         public void DeleteAuthor(int authorId)
         {
-            Author author = GetAuthorById(authorId);
-            _context.Authors.Remove(author);
-            _context.SaveChanges();
+
+       
+                Author author = GetAuthorById(authorId);
+                _context.Authors.Remove(author);
+                _context.SaveChanges();
+
         }
 
         public void EditAuthor(Author author)
         {
-            _context.Authors.Update(author);
-            _context.SaveChanges();
+           
+                _context.Authors.Update(author);
+                _context.SaveChanges();
+  
+
         }
 
         public IEnumerable<Author> GetAllAuthors()
