@@ -14,53 +14,61 @@ namespace BookStore.Repositories
 
     public class BookRepository : IBookRepository
     {
-      
+
         private readonly DataContext _context;
+        private readonly ILogger<BookRepository> _logger;
 
 
-
-        public BookRepository(DataContext context)
+        public BookRepository(DataContext context, ILogger<BookRepository> logger)
         {
-           
+            _logger = logger;
             _context = context;
         }
 
         public void AddBook(Book book)
         {
-          
+            try
+            {
                 _context.Books.Add(book);
                 _context.SaveChanges();
-       
+                _logger.LogInformation(LoggerMessageDisplay.BookCreated);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(LoggerMessageDisplay.BookNotCreatedModelStateInvalid + "|" + ex);
+                throw;
+            }
+
 
 
         }
 
         public void DeleteBook(int bookID)
         {
-          
-                Book book = GetBookByID(bookID);
-                _context.Books.Remove(book);
-                _context.SaveChanges();
-   
+
+            Book book = GetBookByID(bookID);
+            _context.Books.Remove(book);
+            _context.SaveChanges();
+
         }
 
         public void EditBook(Book book)
         {
-          
-                _context.Books.Update(book);
-                _context.SaveChanges();
-          
+
+            _context.Books.Update(book);
+            _context.SaveChanges();
+
 
         }
 
         public void EditBook(int id)
         {
-        
-                var book = GetBookByID(id);
-                _context.Books.Update(book);
-                _context.SaveChanges();
-                
-          
+
+            var book = GetBookByID(id);
+            _context.Books.Update(book);
+            _context.SaveChanges();
+
+
 
         }
 

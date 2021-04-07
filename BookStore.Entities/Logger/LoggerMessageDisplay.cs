@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BookStore.Entities.Loger
 {
-    public class LoggerMasageDisplay
+    public class LoggerMessageDisplay
     {
         // Book Messages
         public const string BooksListed = "All books listed successfully!";

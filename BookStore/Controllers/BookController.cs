@@ -15,7 +15,7 @@ namespace BookStore.Controllers
 {
     public class BookController : Controller
     {
-        
+
         private readonly IBookService _bookService;
         private readonly IAuthorService _authorService;
         private readonly ICategoryService _categoryService;
@@ -40,7 +40,7 @@ namespace BookStore.Controllers
         public IActionResult Index()
         {
             var books = _bookService.GetAllBooks();
-            _logger.LogInformation(LoggerMasageDisplay.BooksListed);
+            _logger.LogInformation(LoggerMessageDisplay.BooksListed);
             return View(books);
         }
 
@@ -64,58 +64,59 @@ namespace BookStore.Controllers
         [HttpPost]
         public IActionResult Create(BookViewModel model)
         {
-            if (ModelState.IsValid)
-            {
-                //var book = new Book()
-                //{
-                //   AuthorID = model.AuthorID,
-                //   AuthorName = model.AuthorName,
-                //};
+            //if (ModelState.IsValid)
+            //{
+            //var book = new Book()
+            //{
+            //   AuthorID = model.AuthorID,
+            //   AuthorName = model.AuthorName,
+            //};
 
-                //var author = new Author();
-                //author.Name = model.AuthorNameDTO;
-                //author.Country = model.AuthorCountryDTO;
-                //author.DateBirth = model.AuthorDateBirthDTO;
-                //author.Gender = model.AuthorGenderDTO;
-                //author.Language = model.AuthorLanguageDTO;
-                //author.Popularity = model.AuthorPopularityDTO;
-                //author.ShortDiscription = model.AuthorShortDiscriptionDTO;
-                //_authorService.Add(author);
-                //... category, publisher...
+            //var author = new Author();
+            //author.Name = model.AuthorNameDTO;
+            //author.Country = model.AuthorCountryDTO;
+            //author.DateBirth = model.AuthorDateBirthDTO;
+            //author.Gender = model.AuthorGenderDTO;
+            //author.Language = model.AuthorLanguageDTO;
+            //author.Popularity = model.AuthorPopularityDTO;
+            //author.ShortDiscription = model.AuthorShortDiscriptionDTO;
+            //_authorService.Add(author);
+            //... category, publisher...
+            //}
 
-                var book = new Book();
-                book.Title = model.Title;
-                book.AuthorID = model.AuthorID;
-                book.AuthorName = model.AuthorNameDTO;
-                book.BookCoverType = model.BookCoverType;
-                book.BookType = model.BookType;
-                book.Category = model.Category;
-                book.CategoryID = model.CategoryID;
-                book.CategoryName = model.CategoryName;
-                book.Copies = model.Copies;
-                book.Country = model.Country;
-                book.DateAdded = DateTime.Now;
-                book.Dimension = model.Dimension;
-                book.Discription = model.Discription;
-                book.Edition = model.Edition;
-                book.Genre = model.Genre;
-                book.Language = model.Language;
-                book.NumberOfPages = model.NumberOfPages;
-                book.PhotoURL = model.PhotoURL;
-                book.Price = model.Price;
-                book.PublisherName = model.PublisherName;
-                book.PublisherID = model.PublisherID;
-                book.Rating = model.Rating;
-                book.Shipping = model.Shipping;
-                book.SoldItems = model.SoldItems;
-                book.Weight = model.Weight;
-                book.YearOfIssue = model.YearOfIssue;
-
-
-                _bookService.Add(book);
+            var book = new Book();
+            book.Title = model.Title;
+            book.AuthorID = model.AuthorID;
+            book.AuthorName = model.AuthorNameDTO;
+            book.BookCoverType = model.BookCoverType;
+            book.BookType = model.BookType;
+            book.Category = model.Category;
+            book.CategoryID = model.CategoryID;
+            book.CategoryName = model.CategoryName;
+            book.Copies = model.Copies;
+            book.Country = model.Country;
+            book.DateAdded = DateTime.Now;
+            book.Dimension = model.Dimension;
+            book.Discription = model.Discription;
+            book.Edition = model.Edition;
+            book.Genre = model.Genre;
+            book.Language = model.Language;
+            book.NumberOfPages = model.NumberOfPages;
+            book.PhotoURL = model.PhotoURL;
+            book.Price = model.Price;
+            book.PublisherName = model.PublisherName;
+            book.PublisherID = model.PublisherID;
+            book.Rating = model.Rating;
+            book.Shipping = model.Shipping;
+            book.SoldItems = model.SoldItems;
+            book.Weight = model.Weight;
+            book.YearOfIssue = model.YearOfIssue;
 
 
-            }
+            _bookService.Add(book);
+            _logger.LogInformation(LoggerMessageDisplay.BookCreated);
+
+
             return RedirectToAction(nameof(Index));
         }
 
@@ -139,11 +140,30 @@ namespace BookStore.Controllers
         [HttpPost]
         public IActionResult Edit(int id, Book book)
         {
-            if (ModelState.IsValid)
+
+
+            try
             {
-                _bookService.Edit(book);
+                if (ModelState.IsValid)
+                {
+                    
+                    _bookService.Edit(book);
+                    _logger.LogInformation(LoggerMessageDisplay.BookEdited);
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    _logger.LogError(LoggerMessageDisplay.BookEditErrorModelStateInvalid);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(LoggerMessageDisplay.BookEditNotFound + "|" + ex);
+                throw;
             }
             return RedirectToAction(nameof(Index));
+
+
 
         }
         [HttpGet]
@@ -173,14 +193,14 @@ namespace BookStore.Controllers
             return Json(new { booksData = allBooks });
         }
         [HttpPost]
-        public IActionResult UploadPhoto ()
+        public IActionResult UploadPhoto()
         {
             try
             {
                 var file = Request.Form.Files[0];
                 var folderName = Path.Combine("wwwroot", "photos");
-                var pathToSave = Path.Combine(Directory.GetCurrentDirectory(),folderName);
-                
+                var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
+
                 if (file.Length > 0)
                 {
                     var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
@@ -201,7 +221,7 @@ namespace BookStore.Controllers
             }
             catch (Exception ex)
             {
-               
+
                 return StatusCode(500, "Internal Server Error" + ex);
             }
 

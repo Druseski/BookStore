@@ -21,14 +21,14 @@ namespace BookStore.Controllers
             IBookService bookService)
         {
             _logger = logger;
-            logger.LogDebug(1, "NLog injected into HomeController");
+            
             _bookService = bookService;
 
         }
 
         public IActionResult Index()
         {
-            _logger.LogInformation("Hello, this is the index!");
+            
             var books = _bookService.GetAllBooks();
             var booksWithFullData = _bookService.GetAllBooksWithFullRelationalData();
             var homeViewModel = new HomeviewModel()

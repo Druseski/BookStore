@@ -14,7 +14,7 @@
     <hr />
     <div class="row">
         <div class="col-12">
-            <form asp-action="Create">
+            <form asp-action="Create" name="bookcreate">
                 <div class="row form-group">
                     <div class="col-6">
                         <label asp-for="Title" for="title" class="form-label">Title</label>
@@ -276,6 +276,6 @@
 
 @section Scripts{
     <script src="~/js/Book/Book.js"></script>
-
+    
 }
 

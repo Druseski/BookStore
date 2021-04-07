@@ -12,7 +12,7 @@ namespace BookStore.Repositories
 {
     public class AuthorRepository : IAuthorRepository
     {
-        private readonly ILogger<BookRepository> _logger;
+       
         private readonly DataContext _context;
 
         public AuthorRepository(DataContext context)
