@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStore.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210331162242_initial_data_seed")]
-    partial class initial_data_seed
+    [Migration("20210409181406_initial-seed")]
+    partial class initialseed
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -63,7 +63,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 1,
                             Country = "Country1",
-                            DateBirth = new DateTime(2021, 3, 31, 18, 22, 42, 406, DateTimeKind.Local).AddTicks(2054),
+                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 818, DateTimeKind.Local).AddTicks(9735),
                             Gender = "Female",
                             Language = "English",
                             Name = "Agatha Christie",
@@ -74,7 +74,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 2,
                             Country = "Country2",
-                            DateBirth = new DateTime(2021, 3, 31, 18, 22, 42, 407, DateTimeKind.Local).AddTicks(9522),
+                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(477),
                             Gender = "Male",
                             Language = "English",
                             Name = "Stephen King",
@@ -85,18 +85,18 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 3,
                             Country = "Country3",
-                            DateBirth = new DateTime(2021, 3, 31, 18, 22, 42, 407, DateTimeKind.Local).AddTicks(9562),
+                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(499),
                             Gender = "Male",
                             Language = "English",
                             Name = "William Shakespeare",
                             Popularity = false,
-                            ShortDiscription = "William Shakespeare (bapt. 26 April 1564 – 23 April 1616) was an English poet, playwright, and actor, widely regarded as the greatest writer in the English language and the world's greatest dramatist. He is often called England's national poet and the \"Bard of Avon\" (or simply \"the Bard\"). His extant works, including collaborations, consist of some 39 plays, 154 sonnets, two long narrative poems, and a few other verses, some of uncertain authorship. His plays have been translated into every major living language and are performed more often than those of any other playwright"
+                            ShortDiscription = "William Shakespeare (bapt. 26 April 1564 – 23 April 1616) was an English poet, playwright, and actor, wIDely regarded as the greatest writer in the English language and the world's greatest dramatist. He is often called England's national poet and the \"Bard of Avon\" (or simply \"the Bard\"). His extant works, including collaborations, consist of some 39 plays, 154 sonnets, two long narrative poems, and a few other verses, some of uncertain authorship. His plays have been translated into every major living language and are performed more often than those of any other playwright"
                         },
                         new
                         {
                             ID = 4,
                             Country = "Country4",
-                            DateBirth = new DateTime(2021, 3, 31, 18, 22, 42, 407, DateTimeKind.Local).AddTicks(9567),
+                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(503),
                             Gender = "Female",
                             Language = "English",
                             Name = "J. K. Rowling",
@@ -107,7 +107,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 5,
                             Country = "Country5",
-                            DateBirth = new DateTime(2021, 3, 31, 18, 22, 42, 407, DateTimeKind.Local).AddTicks(9570),
+                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(506),
                             Gender = "Male",
                             Language = "English",
                             Name = "Leo Tolstoy",
@@ -118,7 +118,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 6,
                             Country = "Country6",
-                            DateBirth = new DateTime(2021, 3, 31, 18, 22, 42, 407, DateTimeKind.Local).AddTicks(9573),
+                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(508),
                             Gender = "Male",
                             Language = "English",
                             Name = "Paulo Coelho",
@@ -129,18 +129,18 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 7,
                             Country = "Country7",
-                            DateBirth = new DateTime(2021, 3, 31, 18, 22, 42, 407, DateTimeKind.Local).AddTicks(9603),
+                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(511),
                             Gender = "Male",
                             Language = "English",
                             Name = "Jeffrey Archer",
                             Popularity = false,
-                            ShortDiscription = "Jeffrey Howard Archer (born 15 April 1940) is an English novelist, former politician, convicted perjurer, and peer of the realm. Before becoming an author,Archer was a Member of Parliament(1969–1974), but did not seek re - election after a financial scandal that left him almost bankrupt.He revived his fortunes as a best - selling novelist; his books have sold around 330 million copies worldwide"
+                            ShortDiscription = "Jeffrey Howard Archer (born 15 April 1940) is an English novelist, former politician, convicted perjurer, and peer of the realm. Before becoming an author,Archer was a Member of Parliament(1969–1974), but dID not seek re - election after a financial scandal that left him almost bankrupt.He revived his fortunes as a best - selling novelist; his books have sold around 330 million copies worldwIDe"
                         },
                         new
                         {
                             ID = 8,
                             Country = "Country8",
-                            DateBirth = new DateTime(2021, 3, 31, 18, 22, 42, 407, DateTimeKind.Local).AddTicks(9607),
+                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(513),
                             Gender = "Male",
                             Language = "English",
                             Name = "Ian Fleming",
@@ -151,7 +151,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 9,
                             Country = "Country9",
-                            DateBirth = new DateTime(2021, 3, 31, 18, 22, 42, 407, DateTimeKind.Local).AddTicks(9609),
+                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(516),
                             Gender = "Male",
                             Language = "English",
                             Name = "Nicholas Sparks",
@@ -162,7 +162,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 10,
                             Country = "Country10",
-                            DateBirth = new DateTime(2021, 3, 31, 18, 22, 42, 407, DateTimeKind.Local).AddTicks(9612),
+                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(519),
                             Gender = "Male",
                             Language = "English",
                             Name = "Dan Brown",
@@ -289,9 +289,9 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Fiction",
                             Copies = 100,
                             Country = "UK",
-                            DateAdded = new DateTime(2021, 3, 31, 18, 22, 42, 408, DateTimeKind.Local).AddTicks(8425),
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(8819),
                             Dimension = "12x12x20",
-                            Discription = "Book seed 1 Description",
+                            Discription = "Book seed 1 Discription",
                             Edition = 1,
                             Genre = "Fiction",
                             Language = "English",
@@ -319,9 +319,9 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Fantasy",
                             Copies = 50,
                             Country = "",
-                            DateAdded = new DateTime(2021, 3, 31, 18, 22, 42, 408, DateTimeKind.Local).AddTicks(9748),
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(95),
                             Dimension = "Not known",
-                            Discription = "Now a major motion picture starring Matthew McConaughey and Idris Elba. An impressive work of mythic magnitude that may turn out to be Stephen King's greatest literary achievement (The Atlanta Journal-Constitution), The Gunslinger is the first volume in the epic Dark Tower Series. A #1 national bestseller, The Gunslinger introduces readers to one of Stephen King's most powerful creations, Roland of Gilead: The Last Gunslinger. He is a haunting figure, a loner on a spellbinding journey into good and evil. In his desolate world, which mirrors our own in frightening ways, Roland tracks The Man in Black, encounters an enticing woman named Alice, and begins a friendship with the boy from New York named Jake. Inspired in part by the Robert Browning narrative poem,Childe Roland to the Dark Tower Came, The Gunslinger is a compelling whirlpool of a story that draws one irretrievable to its center ( Milwaukee Sentinel ). It is brilliant and fresh...and will leave you panting for more ( Booklist ).",
+                            Discription = "Now a major motion picture starring Matthew McConaughey and IDris Elba. An impressive work of mythic magnitude that may turn out to be Stephen King's greatest literary achievement (The Atlanta Journal-Constitution), The Gunslinger is the first volume in the epic Dark Tower Series. A #1 national bestseller, The Gunslinger introduces readers to one of Stephen King's most powerful creations, Roland of Gilead: The Last Gunslinger. He is a haunting figure, a loner on a spellbinding journey into good and evil. In his desolate world, which mirrors our own in frightening ways, Roland tracks The Man in Black, encounters an enticing woman named Alice, and begins a friendship with the boy from New York named Jake. Inspired in part by the Robert Browning narrative poem,Childe Roland to the Dark Tower Came, The Gunslinger is a compelling whirlpool of a story that draws one irretrievable to its center ( Milwaukee Sentinel ). It is brilliant and fresh...and will leave you panting for more ( Booklist ).",
                             Edition = 1,
                             Genre = "Fantasy",
                             Language = "English",
@@ -349,9 +349,9 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Horror",
                             Copies = 20,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 3, 31, 18, 22, 42, 408, DateTimeKind.Local).AddTicks(9782),
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(129),
                             Dimension = "6.51 x 9.56 x 2.01 inches",
-                            Discription = "Once upon a time, in the haunted city of Derry (site of the classics \"It\" and \"Insomnia),\" four boys stood together and did a brave thing. Certainly a good thing, perhaps even a great thing. Something that changed them in ways they could never begin to understand. Twenty - five years later, the boys are now men with separate lives and separate troubles. But the ties endure. Each hunting season the foursome reunite in the woods of Maine. This year, a stranger stumbles into their camp, disoriented, mumbling something about lights in the sky. His incoherent ravings prove to be dis - turbingly prescient.Before long, these men will be plunged into a horrifying struggle with a creature from another world. Their only chance of survival is locked in their shared past-- and in the Dreamcatcher.",
+                            Discription = "Once upon a time, in the haunted city of Derry (site of the classics \"It\" and \"Insomnia),\" four boys stood together and dID a brave thing. Certainly a good thing, perhaps even a great thing. Something that changed them in ways they could never begin to understand. Twenty - five years later, the boys are now men with separate lives and separate troubles. But the ties endure. Each hunting season the foursome reunite in the woods of Maine. This year, a stranger stumbles into their camp, disoriented, mumbling something about lights in the sky. His incoherent ravings prove to be dis - turbingly prescient.Before long, these men will be plunged into a horrifying struggle with a creature from another world. Their only chance of survival is locked in their shared past-- and in the Dreamcatcher.",
                             Edition = 1,
                             Genre = "Horror",
                             Language = "English",
@@ -379,7 +379,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "General",
                             Copies = 150,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 3, 31, 18, 22, 42, 408, DateTimeKind.Local).AddTicks(9788),
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(134),
                             Dimension = "5.12 x 7.80 x 1.22 inches",
                             Discription = "Stephen King's international bestselling - and highly acclaimed - novel, also a hugely successful film starring Tom Hanks",
                             Edition = 1,
@@ -409,7 +409,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Horror",
                             Copies = 200,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 3, 31, 18, 22, 42, 408, DateTimeKind.Local).AddTicks(9792),
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(138),
                             Dimension = "4.21 x 6.93 x 1.51 inches",
                             Discription = "Old Ralph Roberts hasn't been sleeping well lately. Every night he wakes just a little bit earlier, and pretty soon, he thinks, he won't get any sleep at all. It wouldn't be so bad, except for the strange hallucinations he's been having. Or, at least, he hopes they are hallucinations--because here in Derry, one never can tell. Part of the \"Books That Take You Anywhere You Want To Go\" Summer Reading Promotion.",
                             Edition = 1,
@@ -439,7 +439,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Thrillers",
                             Copies = 40,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 3, 31, 18, 22, 42, 408, DateTimeKind.Local).AddTicks(9795),
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(142),
                             Dimension = "6.44 x 9.42 x 1.46 inches",
                             Discription = "Evil forces try to destroy a boy with psychic powers.",
                             Edition = 1,
@@ -469,7 +469,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Horror",
                             Copies = 230,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 3, 31, 18, 22, 42, 408, DateTimeKind.Local).AddTicks(9799),
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(146),
                             Dimension = "4.22 x 6.86 x 1.52 inches",
                             Discription = "Now repackaged with stunning new cover art, this #1 bestseller is a chilling story set in a lonely Nevada town where the evil embedded in the landscape is awesome--but so are the forces summoned to combat it. Reissue",
                             Edition = 1,
@@ -499,24 +499,384 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Drama",
                             Copies = 65,
                             Country = "UK",
-                            DateAdded = new DateTime(2021, 3, 31, 18, 22, 42, 408, DateTimeKind.Local).AddTicks(9803),
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(150),
                             Dimension = "4.10 x 6.70 x 1.00 inches",
                             Discription = "Shakespeare's tragedy about Othello the Moor is presented in this freshly edited text with full explanatory notes, scene-by-scene plot summaries, an Introduction to reading Shakespeare's language, and much more. Reissue.",
                             Edition = 1,
                             Genre = "Drama",
                             Language = "English",
                             NumberOfPages = 368,
-                            PhotoURL = "WilliamShakespeare_Othell...",
+                            PhotoURL = "WilliamShakespeare_Othello.jpg",
                             Price = 5.9800000000000004,
                             PublisherID = 7,
                             PublisherName = "Simon & Schuster",
                             Rating = 3.5,
                             Shipping = "Free",
-                            SoldItems = 5,
+                            SoldItems = 18,
                             Title = "Othello",
                             UserID = 1,
                             Weight = 0.40000000000000002,
                             YearOfIssue = new DateTime(2003, 12, 23, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            ID = 9,
+                            AuthorID = 4,
+                            AuthorName = "J. K. Rowling",
+                            BookCoverType = "Paper",
+                            BookType = "Paperback",
+                            CategoryID = 1,
+                            CategoryName = "Fiction",
+                            Copies = 131,
+                            Country = "UK",
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(154),
+                            Dimension = "4.45 x 7.01 x 0.87 inches",
+                            Discription = "The one that started the biggest publishing phenomenon of our time",
+                            Edition = 1,
+                            Genre = "Fiction",
+                            Language = "English",
+                            NumberOfPages = 336,
+                            PhotoURL = "Harry-Potter-and-the-Philosopher-s-Stone-Rowling-J-K.jpg",
+                            Price = 9.9800000000000004,
+                            PublisherID = 1,
+                            PublisherName = "William Morrow Paperbacks",
+                            Rating = 3.5,
+                            Shipping = "Free",
+                            SoldItems = 17,
+                            Title = "Harry Potter and the Philosopher's Stone",
+                            UserID = 1,
+                            Weight = 0.34999999999999998,
+                            YearOfIssue = new DateTime(2004, 7, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            ID = 10,
+                            AuthorID = 6,
+                            AuthorName = "Paulo Coelho",
+                            BookCoverType = "Paper",
+                            BookType = "Paperback",
+                            CategoryID = 1,
+                            CategoryName = "Fiction",
+                            Copies = 222,
+                            Country = "UK",
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(158),
+                            Dimension = "5.36 x 8.02 x 0.56 inches",
+                            Discription = "This international bestseller about the shepherd boy Santiago who learns how to live his dreams includes an inspiring afterword by the author.",
+                            Edition = 1,
+                            Genre = "Fiction",
+                            Language = "English",
+                            NumberOfPages = 197,
+                            PhotoURL = "PauloCoelho_The-Alchemist.jpg",
+                            Price = 6.9800000000000004,
+                            PublisherID = 1,
+                            PublisherName = "William Morrow Paperbacks",
+                            Rating = 3.5,
+                            Shipping = "Free",
+                            SoldItems = 16,
+                            Title = "The Alchemist",
+                            UserID = 1,
+                            Weight = 0.48999999999999999,
+                            YearOfIssue = new DateTime(2006, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            ID = 11,
+                            AuthorID = 6,
+                            AuthorName = "Paulo Coelho",
+                            BookCoverType = "Paper",
+                            BookType = "Paperback",
+                            CategoryID = 1,
+                            CategoryName = "Fiction",
+                            Copies = 34,
+                            Country = "USA",
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(161),
+                            Dimension = "5.32 x 8.04 x 0.77 inches",
+                            Discription = "This gripping and daring novel by the author of the bestselling \"The Alchemist\" sensitively explores the sacred nature of sex and love. \"Sensual. . . for-adults - only fairytale.\"--\"Washington Post.\"",
+                            Edition = 1,
+                            Genre = "Fiction",
+                            Language = "English",
+                            NumberOfPages = 320,
+                            PhotoURL = "PauloCoelho_Eleven-Minutes.jpg",
+                            Price = 12.48,
+                            PublisherID = 5,
+                            PublisherName = "HarperCollins",
+                            Rating = 3.5,
+                            Shipping = "Free",
+                            SoldItems = 8,
+                            Title = "Eleven Minutes",
+                            UserID = 1,
+                            Weight = 0.52000000000000002,
+                            YearOfIssue = new DateTime(2005, 3, 29, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            ID = 12,
+                            AuthorID = 7,
+                            AuthorName = "Jeffrey Archer",
+                            BookCoverType = "Paper",
+                            BookType = "Paperback",
+                            CategoryID = 1,
+                            CategoryName = "Fiction",
+                            Copies = 87,
+                            Country = "USA",
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(165),
+                            Dimension = "4.32 x 6.04 x 0.57 inches",
+                            Discription = "Jeffrey Archer's mesmerizing saga of the Clifton and Barrington families continues... 1945, London. The vote in the House of Lords as to who should inherit the Barrington family fortune has ended in a tie. The Lord Chancellor's decIDing vote will cast a long shadow on the lives of Harry Clifton and Giles Barrington. Harry returns to America to promote his latest novel, while his beloved Emma goes in search of the little girl who was found abandoned in her father's office on the night he was killed. When the general election is called, Giles Barrington has to defend his seat in the House of Commons and is horrified to discover who the Conservatives select to stand against him. But it is Sebastian Clifton, Harry and Emma's son, who ultimately influences his uncle's fate. In 1957, Sebastian wins a scholarship to CambrIDge, and a new generation of the Clifton family marches onto the page. But after Sebastian is expelled from school, he unwittingly becomes caught up in an international art fraud involving a Rodin statue that is worth far more than the sum it raises at auction. Does he become a millionaire? Does he go to CambrIDge? Is his life in danger?",
+                            Edition = 1,
+                            Genre = "Fiction",
+                            Language = "English",
+                            NumberOfPages = 423,
+                            PhotoURL = "ArcherJeffrey-Best-Kept-Secret.jpg",
+                            Price = 14.48,
+                            PublisherID = 4,
+                            PublisherName = "Hachette Livre",
+                            Rating = 3.5,
+                            Shipping = "Free",
+                            SoldItems = 9,
+                            Title = "Best Kept Secret (The Clifton Chronicles)",
+                            UserID = 1,
+                            Weight = 0.56999999999999995,
+                            YearOfIssue = new DateTime(2014, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            ID = 13,
+                            AuthorID = 8,
+                            AuthorName = "Ian Fleming",
+                            BookCoverType = "Paper",
+                            BookType = "Paperback",
+                            CategoryID = 2,
+                            CategoryName = "Action",
+                            Copies = 122,
+                            Country = "UK",
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(169),
+                            Dimension = "4.32 x 6.04 x 0.57 inches",
+                            Discription = "In the novel that introduced James Bond to the world, Ian Fleming's agent 007 is dispatched to a French casino in Royale-les-Eaux. His mission? Bankrupt a ruthless Russian agent who's been on a bad luck streak at the baccarat table. One of SMERSH's most deadly operatives, the man known only as ?Le Chiffre, ? has been a prime target of the British Secret Service for years. If Bond can wipe out his bankroll, Le Chiffre will likely be ?retired? by his paymasters in Moscow. But what if the cards won't cooperate? After a brutal night at the gaming tables, Bond soon finds himself dodging would-be assassins, fighting off brutal torturers, and going all-in to save the life of his beautiful female counterpart, Vesper Lynd. Taut, tense, and effortlessly stylish, Ian Fleming's inaugural James Bond adventure has all the hallmarks that made the series a touchstone for a generation of readers.",
+                            Edition = 1,
+                            Genre = "Action",
+                            Language = "English",
+                            NumberOfPages = 486,
+                            PhotoURL = "IanFlemming_Casino_Royale.jpg",
+                            Price = 13.48,
+                            PublisherID = 3,
+                            PublisherName = "Penguin Random House",
+                            Rating = 3.5,
+                            Shipping = "Free",
+                            SoldItems = 15,
+                            Title = "Casino Royale",
+                            UserID = 1,
+                            Weight = 0.29999999999999999,
+                            YearOfIssue = new DateTime(2012, 10, 16, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            ID = 14,
+                            AuthorID = 8,
+                            AuthorName = "Ian Fleming",
+                            BookCoverType = "Paper",
+                            BookType = "Paperback",
+                            CategoryID = 2,
+                            CategoryName = "Action",
+                            Copies = 10,
+                            Country = "UK",
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(173),
+                            Dimension = "5.12 x 7.72 x 0.53 inches",
+                            Discription = "The lethal SMERSH organization in Russia has targeted Agent 007 for elimination. But when James Bond allows himself to be lured to Istanbul and walks willingly into a trap, a game of cross and double-cross ensues, with Bond as both the stakes and the prize.",
+                            Edition = 1,
+                            Genre = "Action",
+                            Language = "English",
+                            NumberOfPages = 272,
+                            PhotoURL = "IanFleming_From-Russia-with-Love.jpg",
+                            Price = 6.4800000000000004,
+                            PublisherID = 3,
+                            PublisherName = "Penguin Random House",
+                            Rating = 3.5,
+                            Shipping = "Free",
+                            SoldItems = 14,
+                            Title = "From Russia with Love",
+                            UserID = 1,
+                            Weight = 0.41999999999999998,
+                            YearOfIssue = new DateTime(2002, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            ID = 15,
+                            AuthorID = 9,
+                            AuthorName = "Nicholas Sparks",
+                            BookCoverType = "Paper",
+                            BookType = "Paperback",
+                            CategoryID = 1,
+                            CategoryName = "Fiction",
+                            Copies = 37,
+                            Country = "UK",
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(177),
+                            Dimension = "4.10 x 6.70 x 1.00 inches",
+                            Discription = "No Discription is available.",
+                            Edition = 1,
+                            Genre = "Romance",
+                            Language = "English",
+                            NumberOfPages = 463,
+                            PhotoURL = "NicolasSparks_Every13Breath.jpg",
+                            Price = 8.9800000000000004,
+                            PublisherID = 4,
+                            PublisherName = "Hachette Livre",
+                            Rating = 3.5,
+                            Shipping = "Free",
+                            SoldItems = 13,
+                            Title = "Every Breath",
+                            UserID = 1,
+                            Weight = 0.5,
+                            YearOfIssue = new DateTime(2010, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            ID = 16,
+                            AuthorID = 9,
+                            AuthorName = "Nicholas Sparks",
+                            BookCoverType = "Paper",
+                            BookType = "Paperback",
+                            CategoryID = 1,
+                            CategoryName = "Fiction",
+                            Copies = 44,
+                            Country = "UK",
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(181),
+                            Dimension = "4.10 x 6.70 x 1.00 inches",
+                            Discription = "#1 bestselling author Nicholas Sparks's new novel is at once a compelling family drama and a heartrending tale of young love.Seventeen year old Veronica \"Ronnie\" Miller's life was turned upsIDe-down when her parents divorced and her father moved from New York City to Wilmington, North Carolina. Three years later, she remains angry and alientated from her parents, especially her father...until her mother decIDes it would be in everyone's best interest if she spent the summer in Wilmington with him. Ronnie's father, a former concert pianist and teacher, is living a quiet life in the beach town, immersed in creating a work of art that will become the centerpiece of a local church.The tale that unfolds is an unforgettable story of love on many levels--first love, love between parents and children -- that demonstrates, as only a Nicholas Sparks novel can, the many ways that love can break our hearts...and heal them.",
+                            Edition = 1,
+                            Genre = "Romance",
+                            Language = "English",
+                            NumberOfPages = 463,
+                            PhotoURL = "NicolasSparks_The-Last-Song.jpg",
+                            Price = 8.9800000000000004,
+                            PublisherID = 4,
+                            PublisherName = "Hachette Livre",
+                            Rating = 3.5,
+                            Shipping = "Free",
+                            SoldItems = 10,
+                            Title = "The Last Song",
+                            UserID = 1,
+                            Weight = 0.5,
+                            YearOfIssue = new DateTime(2010, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            ID = 17,
+                            AuthorID = 10,
+                            AuthorName = "Dan Brown",
+                            BookCoverType = "Paper",
+                            BookType = "Paperback",
+                            CategoryID = 7,
+                            CategoryName = "Thrillers",
+                            Copies = 111,
+                            Country = "USA",
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(185),
+                            Dimension = "4.28 x 7.54 x 1.33 inches",
+                            Discription = "PREMIUM MASS MARKET EDITION #1 WorldwIDe Bestseller--More Than 80 Million Copies Sold As millions of readers around the globe have already discovered, The Da Vinci Code is a reading experience unlike any other.Simultaneously lightning - paced, intelligent,and intricately layered with remarkable research and detail, Dan Brown's novel is a thrilling masterpiece--from its opening pages to its stunning conclusion.",
+                            Edition = 2,
+                            Genre = "Thriller",
+                            Language = "English",
+                            NumberOfPages = 608,
+                            PhotoURL = "Dan-Brown_The-Da-Vinci-Code.jpg",
+                            Price = 12.98,
+                            PublisherID = 6,
+                            PublisherName = "Macmillan Publishers",
+                            Rating = 3.5,
+                            Shipping = "Free",
+                            SoldItems = 12,
+                            Title = "The Da Vinci Code",
+                            UserID = 1,
+                            Weight = 0.48999999999999999,
+                            YearOfIssue = new DateTime(2009, 3, 31, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            ID = 18,
+                            AuthorID = 10,
+                            AuthorName = "Dan Brown",
+                            BookCoverType = "Paper",
+                            BookType = "Paperback",
+                            CategoryID = 7,
+                            CategoryName = "Thrillers",
+                            Copies = 100,
+                            Country = "USA",
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(189),
+                            Dimension = "4.28 x 7.54 x 1.33 inches",
+                            Discription = "#1 WORLDWIDE BESTSELLER Harvard professor of symbology Robert Langdon awakens in an Italian hospital, disoriented and with no recollection of the past thirty-six hours, including the origin of the macabre object hIDden in his belongings. With a relentless female assassin trailing them through Florence, he and his resourceful doctor, Sienna Brooks, are forced to flee. Embarking on a harrowing journey, they must unravel a series of codes, which are the work of a brilliant scientist whose obsession with the end of the world is matched only by his passion for one of the most influential masterpieces ever written, Dante Alighieri's \"The Inferno.\" Dan Brown has raised the bar yet again, combining classical Italian art, history, and literature with cutting-edge science in this sumptuously entertaining thriller.",
+                            Edition = 1,
+                            Genre = "Thriller",
+                            Language = "English",
+                            NumberOfPages = 648,
+                            PhotoURL = "Dan-Brown_Inferno.jpg",
+                            Price = 5.9800000000000004,
+                            PublisherID = 6,
+                            PublisherName = "Macmillan Publishers",
+                            Rating = 3.5,
+                            Shipping = "Free",
+                            SoldItems = 11,
+                            Title = "Inferno",
+                            UserID = 1,
+                            Weight = 0.5,
+                            YearOfIssue = new DateTime(2014, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            ID = 19,
+                            AuthorID = 1,
+                            AuthorName = "Agatha Christie",
+                            BookCoverType = "Paper",
+                            BookType = "Paperback",
+                            CategoryID = 7,
+                            CategoryName = "Thrillers",
+                            Copies = 300,
+                            Country = "UK",
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(192),
+                            Dimension = "5.82 x 8.52 x 0.94 inches",
+                            Discription = "No Discription is available.",
+                            Edition = 1,
+                            Genre = "Thriller",
+                            Language = "English",
+                            NumberOfPages = 256,
+                            PhotoURL = "AgathaCristie_13_Problems.jpg",
+                            Price = 17.48,
+                            PublisherID = 7,
+                            PublisherName = "Simon & Schuster",
+                            Rating = 3.5,
+                            Shipping = "Free",
+                            SoldItems = 11,
+                            Title = "The Thirteen Problems",
+                            UserID = 1,
+                            Weight = 0.34999999999999998,
+                            YearOfIssue = new DateTime(2016, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            ID = 20,
+                            AuthorID = 1,
+                            AuthorName = "Agatha Christie",
+                            BookCoverType = "Paper",
+                            BookType = "Paperback",
+                            CategoryID = 7,
+                            CategoryName = "Thrillers",
+                            Copies = 70,
+                            Country = "UK",
+                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(196),
+                            Dimension = "5.82 x 8.52 x 0.94 inches",
+                            Discription = "When Alice Ascher is murdered in Andover, Hercule Poirot is already onto the clues. Alphabetically speaking, it's one down, 25 to go. This classic mystery is now repackaged in a digest-sized edition for young adults. Reissue.",
+                            Edition = 1,
+                            Genre = "Thriller",
+                            Language = "English",
+                            NumberOfPages = 256,
+                            PhotoURL = "AgathaCristie_TheABCMurders.jpg",
+                            Price = 8.4800000000000004,
+                            PublisherID = 7,
+                            PublisherName = "Simon & Schuster",
+                            Rating = 3.5,
+                            Shipping = "Free",
+                            SoldItems = 11,
+                            Title = "The A.B.C. Murders",
+                            UserID = 1,
+                            Weight = 0.98999999999999999,
+                            YearOfIssue = new DateTime(2006, 9, 30, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -589,7 +949,7 @@ namespace BookStore.Data.Migrations
                         new
                         {
                             ID = 11,
-                            Name = "Uncategorized"
+                            Name = "Uncategorised"
                         });
                 });
 
@@ -822,6 +1182,29 @@ namespace BookStore.Data.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "b4280b6a-0613-4cbd-a9e6-f1701e926e73",
+                            ConcurrencyStamp = "d5a48770-b6b1-4ed1-852e-98f120c6734b",
+                            Name = "admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "b4280b6a-0613-4cbd-a9e6-f1701e926e74",
+                            ConcurrencyStamp = "606c212a-8422-4589-b5c8-114954d3893d",
+                            Name = "editor",
+                            NormalizedName = "EDITOR"
+                        },
+                        new
+                        {
+                            Id = "b4280b6a-0613-4cbd-a9e6-f1701e926e75",
+                            ConcurrencyStamp = "8ef04a63-d129-40cf-8b9c-83f57cc21e7d",
+                            Name = "guest",
+                            NormalizedName = "GUEST"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -911,6 +1294,24 @@ namespace BookStore.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "b4280b6a-0613-4cbd-a9e6-f1701e926e73",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "c8554266-b401-4519-9aeb-a9283053fc58",
+                            Email = "admin@bookstore.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMIN@BOOKSTORE.COM",
+                            NormalizedUserName = "ADMIN@BOOKSTORE.COM",
+                            PasswordHash = "AQAAAAEAACcQAAAAECbEUNCm5fUA62AaQXoRHxeTp9T/7irsRf+VQGY7GoptPlpgAfGrkcR8pXURL8yjNw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "",
+                            TwoFactorEnabled = false,
+                            UserName = "admin@bookstore.com"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -974,6 +1375,13 @@ namespace BookStore.Data.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "b4280b6a-0613-4cbd-a9e6-f1701e926e73",
+                            RoleId = "b4280b6a-0613-4cbd-a9e6-f1701e926e73"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>

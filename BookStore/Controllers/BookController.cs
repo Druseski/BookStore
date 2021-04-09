@@ -1,18 +1,22 @@
-﻿using BookStore.Entities;
-using BookStore.Entities.Loger;
-using BookStore.Models;
-using BookStore.Services;
-using BookStore.Services.Interfaces;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Net.Http.Headers;
+﻿
 
 namespace BookStore.Controllers
 {
+    using BookStore.Entities;
+    using BookStore.Entities.Loger;
+    using BookStore.Models;
+    using BookStore.Services;
+    using BookStore.Services.Interfaces;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.Rendering;
+    using Microsoft.Extensions.Logging;
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Net.Http.Headers;
+
+    [Authorize(Roles = "admin,editor")]
     public class BookController : Controller
     {
 
@@ -146,7 +150,7 @@ namespace BookStore.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    
+
                     _bookService.Edit(book);
                     _logger.LogInformation(LoggerMessageDisplay.BookEdited);
                     return RedirectToAction(nameof(Index));
@@ -173,12 +177,14 @@ namespace BookStore.Controllers
             return View(book);
         }
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public IActionResult Delete(int id)
         {
             var book = _bookService.GetBookByID(id);
             return View(book);
         }
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public IActionResult DeleteConfirmed(int id)
         {
             var book = _bookService.GetBookByID(id);
@@ -187,6 +193,7 @@ namespace BookStore.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "admin, editor")]
         public JsonResult GetAllBooksAJAX()
         {
             var allBooks = _bookService.GetAllBooks();
