@@ -1,11 +1,14 @@
-﻿using BookStore.Models;
+﻿using BookStore.Entities.Quotes;
+using BookStore.Models;
 using BookStore.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace BookStore.Controllers
@@ -14,6 +17,7 @@ namespace BookStore.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IBookService _bookService;
+        
 
 
         public HomeController(
@@ -37,6 +41,22 @@ namespace BookStore.Controllers
             };
 
             return View(homeViewModel);
+        }
+
+        public async Task<JsonResult> GetQuotes()
+        {
+            QuotesData quotesData = new QuotesData();
+            using (var httpClient = new HttpClient())
+            {
+                using (var response = await httpClient.GetAsync("https://opinionated-quotes-api.gigalixirapp.com/v1/quotes")) 
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    quotesData = JsonConvert.DeserializeObject<QuotesData>(apiResponse);
+                }
+            }
+            //TODO: Save to our DB
+
+                return Json(quotesData);
         }
 
         public IActionResult Privacy()

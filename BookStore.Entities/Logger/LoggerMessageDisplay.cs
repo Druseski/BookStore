@@ -77,5 +77,6 @@ namespace BookStore.Entities.Loger
         public const string UserEditErrorModelStateInvalid = "User is not edited, ModelState is not valid";
         public const string UserDeleted = "User is deleted successfully";
         public const string UserDeletedError = "User is NOT deleted, error happend in process of deletion";
+        public const string UserAddedRole = "Addet new Role for the User";
     }
 }

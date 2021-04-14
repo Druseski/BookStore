@@ -1,4 +1,5 @@
 ﻿using BookStore.Entities;
+using BookStore.Entities.Quotes;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -19,8 +20,8 @@ namespace BookStore.Data
         public DbSet<Publisher> Publishers { get; set; }
 
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
-
-        public DbSet<WishList> WishLists { get; set; }
+         //public DbSet<Quote> Quotes { get; set; }
+       public DbSet<WishList> WishLists { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -129,6 +129,7 @@ body {
 .bookstore-background{
     background-image:url("../img/Books_shutterstock_hero.jpg");
     background-size:cover;
+    background-position:center;
     background-repeat: no-repeat;
     padding-bottom:20%;
     padding-top:5%;

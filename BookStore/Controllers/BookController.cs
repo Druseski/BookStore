@@ -199,6 +199,8 @@ namespace BookStore.Controllers
             var allBooks = _bookService.GetAllBooks();
             return Json(new { booksData = allBooks });
         }
+
+        
         [HttpPost]
         public IActionResult UploadPhoto()
         {
