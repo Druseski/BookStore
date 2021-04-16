@@ -17,17 +17,18 @@ namespace BookStore.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IBookService _bookService;
-        
+        private readonly IQuoteService _quoteService;
+
 
 
         public HomeController(
             ILogger<HomeController> logger,
-            IBookService bookService)
+            IBookService bookService,
+            IQuoteService quoteService)
         {
             _logger = logger;
-            
             _bookService = bookService;
-
+            _quoteService = quoteService;
         }
 
         public IActionResult Index()
@@ -48,16 +49,32 @@ namespace BookStore.Controllers
             QuotesData quotesData = new QuotesData();
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("https://opinionated-quotes-api.gigalixirapp.com/v1/quotes")) 
+                using (var response = await httpClient.GetAsync("https://opinionated-quotes-api.gigalixirapp.com/v1/quotes"))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     quotesData = JsonConvert.DeserializeObject<QuotesData>(apiResponse);
+
+                    foreach (var quote in quotesData.Quotes)
+                    {
+                        QuoteMap newQuote = new QuoteMap()
+                        {
+                            Author = quote.Author,
+                            Language = quote.Language,
+                            Quote = quote.quote,
+                            Tags = string.Join(",", quote.Tags.ToArray())
+
+
+                        };
+                        _quoteService.Add(newQuote);
+
+                    }
                 }
             }
             //TODO: Save to our DB
 
-                return Json(quotesData);
+            return Json(quotesData);
         }
+
 
         public IActionResult Privacy()
         {

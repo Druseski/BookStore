@@ -1,6 +1,7 @@
 ﻿using BookStore.Data;
 using BookStore.Entities;
 using BookStore.Entities.Loger;
+using BookStore.Entities.Quotes;
 using BookStore.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -42,6 +43,22 @@ namespace BookStore.Repositories
 
 
         }
+
+        public void AddQuote(QuoteMap quote)
+        {
+            try
+            {
+                _context.Quotes.Add(quote);
+                _context.SaveChanges();
+                _logger.LogInformation("Quote Addet to DB");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Quote NOT Added to DB |" + ex);
+                throw;
+            }
+        }
+
 
         public void DeleteBook(int bookID)
         {

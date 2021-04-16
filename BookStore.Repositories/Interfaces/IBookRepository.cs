@@ -1,4 +1,5 @@
 ﻿using BookStore.Entities;
+using BookStore.Entities.Quotes;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,5 +17,6 @@ namespace BookStore.Repositories.Interfaces
 
         IEnumerable<Book> GetAllBooks();
         IEnumerable<Book> GetAllBooksWithFullRelationalData();
+        void AddQuote(QuoteMap quote);
     }
 }

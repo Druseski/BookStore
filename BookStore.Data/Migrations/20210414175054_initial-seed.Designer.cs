@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStore.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210409181406_initial-seed")]
+    [Migration("20210414175054_initial-seed")]
     partial class initialseed
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,7 +63,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 1,
                             Country = "Country1",
-                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 818, DateTimeKind.Local).AddTicks(9735),
+                            DateBirth = new DateTime(2021, 4, 14, 19, 50, 54, 4, DateTimeKind.Local).AddTicks(4132),
                             Gender = "Female",
                             Language = "English",
                             Name = "Agatha Christie",
@@ -74,7 +74,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 2,
                             Country = "Country2",
-                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(477),
+                            DateBirth = new DateTime(2021, 4, 14, 19, 50, 54, 4, DateTimeKind.Local).AddTicks(4855),
                             Gender = "Male",
                             Language = "English",
                             Name = "Stephen King",
@@ -85,7 +85,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 3,
                             Country = "Country3",
-                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(499),
+                            DateBirth = new DateTime(2021, 4, 14, 19, 50, 54, 4, DateTimeKind.Local).AddTicks(4878),
                             Gender = "Male",
                             Language = "English",
                             Name = "William Shakespeare",
@@ -96,7 +96,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 4,
                             Country = "Country4",
-                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(503),
+                            DateBirth = new DateTime(2021, 4, 14, 19, 50, 54, 4, DateTimeKind.Local).AddTicks(4881),
                             Gender = "Female",
                             Language = "English",
                             Name = "J. K. Rowling",
@@ -107,7 +107,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 5,
                             Country = "Country5",
-                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(506),
+                            DateBirth = new DateTime(2021, 4, 14, 19, 50, 54, 4, DateTimeKind.Local).AddTicks(4885),
                             Gender = "Male",
                             Language = "English",
                             Name = "Leo Tolstoy",
@@ -118,7 +118,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 6,
                             Country = "Country6",
-                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(508),
+                            DateBirth = new DateTime(2021, 4, 14, 19, 50, 54, 4, DateTimeKind.Local).AddTicks(4887),
                             Gender = "Male",
                             Language = "English",
                             Name = "Paulo Coelho",
@@ -129,7 +129,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 7,
                             Country = "Country7",
-                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(511),
+                            DateBirth = new DateTime(2021, 4, 14, 19, 50, 54, 4, DateTimeKind.Local).AddTicks(4891),
                             Gender = "Male",
                             Language = "English",
                             Name = "Jeffrey Archer",
@@ -140,7 +140,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 8,
                             Country = "Country8",
-                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(513),
+                            DateBirth = new DateTime(2021, 4, 14, 19, 50, 54, 4, DateTimeKind.Local).AddTicks(4893),
                             Gender = "Male",
                             Language = "English",
                             Name = "Ian Fleming",
@@ -151,7 +151,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 9,
                             Country = "Country9",
-                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(516),
+                            DateBirth = new DateTime(2021, 4, 14, 19, 50, 54, 4, DateTimeKind.Local).AddTicks(4896),
                             Gender = "Male",
                             Language = "English",
                             Name = "Nicholas Sparks",
@@ -162,7 +162,7 @@ namespace BookStore.Data.Migrations
                         {
                             ID = 10,
                             Country = "Country10",
-                            DateBirth = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(519),
+                            DateBirth = new DateTime(2021, 4, 14, 19, 50, 54, 4, DateTimeKind.Local).AddTicks(4900),
                             Gender = "Male",
                             Language = "English",
                             Name = "Dan Brown",
@@ -289,7 +289,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Fiction",
                             Copies = 100,
                             Country = "UK",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 819, DateTimeKind.Local).AddTicks(8819),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(3718),
                             Dimension = "12x12x20",
                             Discription = "Book seed 1 Discription",
                             Edition = 1,
@@ -319,7 +319,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Fantasy",
                             Copies = 50,
                             Country = "",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(95),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5431),
                             Dimension = "Not known",
                             Discription = "Now a major motion picture starring Matthew McConaughey and IDris Elba. An impressive work of mythic magnitude that may turn out to be Stephen King's greatest literary achievement (The Atlanta Journal-Constitution), The Gunslinger is the first volume in the epic Dark Tower Series. A #1 national bestseller, The Gunslinger introduces readers to one of Stephen King's most powerful creations, Roland of Gilead: The Last Gunslinger. He is a haunting figure, a loner on a spellbinding journey into good and evil. In his desolate world, which mirrors our own in frightening ways, Roland tracks The Man in Black, encounters an enticing woman named Alice, and begins a friendship with the boy from New York named Jake. Inspired in part by the Robert Browning narrative poem,Childe Roland to the Dark Tower Came, The Gunslinger is a compelling whirlpool of a story that draws one irretrievable to its center ( Milwaukee Sentinel ). It is brilliant and fresh...and will leave you panting for more ( Booklist ).",
                             Edition = 1,
@@ -349,7 +349,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Horror",
                             Copies = 20,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(129),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5470),
                             Dimension = "6.51 x 9.56 x 2.01 inches",
                             Discription = "Once upon a time, in the haunted city of Derry (site of the classics \"It\" and \"Insomnia),\" four boys stood together and dID a brave thing. Certainly a good thing, perhaps even a great thing. Something that changed them in ways they could never begin to understand. Twenty - five years later, the boys are now men with separate lives and separate troubles. But the ties endure. Each hunting season the foursome reunite in the woods of Maine. This year, a stranger stumbles into their camp, disoriented, mumbling something about lights in the sky. His incoherent ravings prove to be dis - turbingly prescient.Before long, these men will be plunged into a horrifying struggle with a creature from another world. Their only chance of survival is locked in their shared past-- and in the Dreamcatcher.",
                             Edition = 1,
@@ -379,7 +379,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "General",
                             Copies = 150,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(134),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5475),
                             Dimension = "5.12 x 7.80 x 1.22 inches",
                             Discription = "Stephen King's international bestselling - and highly acclaimed - novel, also a hugely successful film starring Tom Hanks",
                             Edition = 1,
@@ -409,7 +409,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Horror",
                             Copies = 200,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(138),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5479),
                             Dimension = "4.21 x 6.93 x 1.51 inches",
                             Discription = "Old Ralph Roberts hasn't been sleeping well lately. Every night he wakes just a little bit earlier, and pretty soon, he thinks, he won't get any sleep at all. It wouldn't be so bad, except for the strange hallucinations he's been having. Or, at least, he hopes they are hallucinations--because here in Derry, one never can tell. Part of the \"Books That Take You Anywhere You Want To Go\" Summer Reading Promotion.",
                             Edition = 1,
@@ -439,7 +439,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Thrillers",
                             Copies = 40,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(142),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5483),
                             Dimension = "6.44 x 9.42 x 1.46 inches",
                             Discription = "Evil forces try to destroy a boy with psychic powers.",
                             Edition = 1,
@@ -469,7 +469,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Horror",
                             Copies = 230,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(146),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5487),
                             Dimension = "4.22 x 6.86 x 1.52 inches",
                             Discription = "Now repackaged with stunning new cover art, this #1 bestseller is a chilling story set in a lonely Nevada town where the evil embedded in the landscape is awesome--but so are the forces summoned to combat it. Reissue",
                             Edition = 1,
@@ -499,7 +499,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Drama",
                             Copies = 65,
                             Country = "UK",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(150),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5491),
                             Dimension = "4.10 x 6.70 x 1.00 inches",
                             Discription = "Shakespeare's tragedy about Othello the Moor is presented in this freshly edited text with full explanatory notes, scene-by-scene plot summaries, an Introduction to reading Shakespeare's language, and much more. Reissue.",
                             Edition = 1,
@@ -529,7 +529,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Fiction",
                             Copies = 131,
                             Country = "UK",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(154),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5495),
                             Dimension = "4.45 x 7.01 x 0.87 inches",
                             Discription = "The one that started the biggest publishing phenomenon of our time",
                             Edition = 1,
@@ -559,7 +559,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Fiction",
                             Copies = 222,
                             Country = "UK",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(158),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5499),
                             Dimension = "5.36 x 8.02 x 0.56 inches",
                             Discription = "This international bestseller about the shepherd boy Santiago who learns how to live his dreams includes an inspiring afterword by the author.",
                             Edition = 1,
@@ -589,7 +589,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Fiction",
                             Copies = 34,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(161),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5503),
                             Dimension = "5.32 x 8.04 x 0.77 inches",
                             Discription = "This gripping and daring novel by the author of the bestselling \"The Alchemist\" sensitively explores the sacred nature of sex and love. \"Sensual. . . for-adults - only fairytale.\"--\"Washington Post.\"",
                             Edition = 1,
@@ -619,7 +619,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Fiction",
                             Copies = 87,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(165),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5507),
                             Dimension = "4.32 x 6.04 x 0.57 inches",
                             Discription = "Jeffrey Archer's mesmerizing saga of the Clifton and Barrington families continues... 1945, London. The vote in the House of Lords as to who should inherit the Barrington family fortune has ended in a tie. The Lord Chancellor's decIDing vote will cast a long shadow on the lives of Harry Clifton and Giles Barrington. Harry returns to America to promote his latest novel, while his beloved Emma goes in search of the little girl who was found abandoned in her father's office on the night he was killed. When the general election is called, Giles Barrington has to defend his seat in the House of Commons and is horrified to discover who the Conservatives select to stand against him. But it is Sebastian Clifton, Harry and Emma's son, who ultimately influences his uncle's fate. In 1957, Sebastian wins a scholarship to CambrIDge, and a new generation of the Clifton family marches onto the page. But after Sebastian is expelled from school, he unwittingly becomes caught up in an international art fraud involving a Rodin statue that is worth far more than the sum it raises at auction. Does he become a millionaire? Does he go to CambrIDge? Is his life in danger?",
                             Edition = 1,
@@ -649,7 +649,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Action",
                             Copies = 122,
                             Country = "UK",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(169),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5512),
                             Dimension = "4.32 x 6.04 x 0.57 inches",
                             Discription = "In the novel that introduced James Bond to the world, Ian Fleming's agent 007 is dispatched to a French casino in Royale-les-Eaux. His mission? Bankrupt a ruthless Russian agent who's been on a bad luck streak at the baccarat table. One of SMERSH's most deadly operatives, the man known only as ?Le Chiffre, ? has been a prime target of the British Secret Service for years. If Bond can wipe out his bankroll, Le Chiffre will likely be ?retired? by his paymasters in Moscow. But what if the cards won't cooperate? After a brutal night at the gaming tables, Bond soon finds himself dodging would-be assassins, fighting off brutal torturers, and going all-in to save the life of his beautiful female counterpart, Vesper Lynd. Taut, tense, and effortlessly stylish, Ian Fleming's inaugural James Bond adventure has all the hallmarks that made the series a touchstone for a generation of readers.",
                             Edition = 1,
@@ -679,7 +679,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Action",
                             Copies = 10,
                             Country = "UK",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(173),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5516),
                             Dimension = "5.12 x 7.72 x 0.53 inches",
                             Discription = "The lethal SMERSH organization in Russia has targeted Agent 007 for elimination. But when James Bond allows himself to be lured to Istanbul and walks willingly into a trap, a game of cross and double-cross ensues, with Bond as both the stakes and the prize.",
                             Edition = 1,
@@ -709,7 +709,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Fiction",
                             Copies = 37,
                             Country = "UK",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(177),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5520),
                             Dimension = "4.10 x 6.70 x 1.00 inches",
                             Discription = "No Discription is available.",
                             Edition = 1,
@@ -739,7 +739,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Fiction",
                             Copies = 44,
                             Country = "UK",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(181),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5524),
                             Dimension = "4.10 x 6.70 x 1.00 inches",
                             Discription = "#1 bestselling author Nicholas Sparks's new novel is at once a compelling family drama and a heartrending tale of young love.Seventeen year old Veronica \"Ronnie\" Miller's life was turned upsIDe-down when her parents divorced and her father moved from New York City to Wilmington, North Carolina. Three years later, she remains angry and alientated from her parents, especially her father...until her mother decIDes it would be in everyone's best interest if she spent the summer in Wilmington with him. Ronnie's father, a former concert pianist and teacher, is living a quiet life in the beach town, immersed in creating a work of art that will become the centerpiece of a local church.The tale that unfolds is an unforgettable story of love on many levels--first love, love between parents and children -- that demonstrates, as only a Nicholas Sparks novel can, the many ways that love can break our hearts...and heal them.",
                             Edition = 1,
@@ -769,7 +769,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Thrillers",
                             Copies = 111,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(185),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5556),
                             Dimension = "4.28 x 7.54 x 1.33 inches",
                             Discription = "PREMIUM MASS MARKET EDITION #1 WorldwIDe Bestseller--More Than 80 Million Copies Sold As millions of readers around the globe have already discovered, The Da Vinci Code is a reading experience unlike any other.Simultaneously lightning - paced, intelligent,and intricately layered with remarkable research and detail, Dan Brown's novel is a thrilling masterpiece--from its opening pages to its stunning conclusion.",
                             Edition = 2,
@@ -799,7 +799,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Thrillers",
                             Copies = 100,
                             Country = "USA",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(189),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5561),
                             Dimension = "4.28 x 7.54 x 1.33 inches",
                             Discription = "#1 WORLDWIDE BESTSELLER Harvard professor of symbology Robert Langdon awakens in an Italian hospital, disoriented and with no recollection of the past thirty-six hours, including the origin of the macabre object hIDden in his belongings. With a relentless female assassin trailing them through Florence, he and his resourceful doctor, Sienna Brooks, are forced to flee. Embarking on a harrowing journey, they must unravel a series of codes, which are the work of a brilliant scientist whose obsession with the end of the world is matched only by his passion for one of the most influential masterpieces ever written, Dante Alighieri's \"The Inferno.\" Dan Brown has raised the bar yet again, combining classical Italian art, history, and literature with cutting-edge science in this sumptuously entertaining thriller.",
                             Edition = 1,
@@ -829,7 +829,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Thrillers",
                             Copies = 300,
                             Country = "UK",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(192),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5564),
                             Dimension = "5.82 x 8.52 x 0.94 inches",
                             Discription = "No Discription is available.",
                             Edition = 1,
@@ -859,7 +859,7 @@ namespace BookStore.Data.Migrations
                             CategoryName = "Thrillers",
                             Copies = 70,
                             Country = "UK",
-                            DateAdded = new DateTime(2021, 4, 9, 20, 14, 5, 820, DateTimeKind.Local).AddTicks(196),
+                            DateAdded = new DateTime(2021, 4, 14, 19, 50, 54, 5, DateTimeKind.Local).AddTicks(5568),
                             Dimension = "5.82 x 8.52 x 0.94 inches",
                             Discription = "When Alice Ascher is murdered in Andover, Hercule Poirot is already onto the clues. Alphabetically speaking, it's one down, 25 to go. This classic mystery is now repackaged in a digest-sized edition for young adults. Reissue.",
                             Edition = 1,
@@ -1103,6 +1103,30 @@ namespace BookStore.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("BookStore.Entities.Quotes.QuoteMap", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Author")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Language")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Quote")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tags")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Quotes");
+                });
+
             modelBuilder.Entity("BookStore.Entities.ShoppingCart", b =>
                 {
                     b.Property<int>("ID")
@@ -1187,21 +1211,21 @@ namespace BookStore.Data.Migrations
                         new
                         {
                             Id = "b4280b6a-0613-4cbd-a9e6-f1701e926e73",
-                            ConcurrencyStamp = "d5a48770-b6b1-4ed1-852e-98f120c6734b",
+                            ConcurrencyStamp = "dd38b5ae-bce0-4574-a5a2-a56efefde7c9",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "b4280b6a-0613-4cbd-a9e6-f1701e926e74",
-                            ConcurrencyStamp = "606c212a-8422-4589-b5c8-114954d3893d",
+                            ConcurrencyStamp = "31383703-9f68-408b-8b51-14a539b9c0c6",
                             Name = "editor",
                             NormalizedName = "EDITOR"
                         },
                         new
                         {
                             Id = "b4280b6a-0613-4cbd-a9e6-f1701e926e75",
-                            ConcurrencyStamp = "8ef04a63-d129-40cf-8b9c-83f57cc21e7d",
+                            ConcurrencyStamp = "1d466f46-3777-4501-b685-03347f247ce0",
                             Name = "guest",
                             NormalizedName = "GUEST"
                         });
@@ -1306,7 +1330,7 @@ namespace BookStore.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@BOOKSTORE.COM",
                             NormalizedUserName = "ADMIN@BOOKSTORE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAECbEUNCm5fUA62AaQXoRHxeTp9T/7irsRf+VQGY7GoptPlpgAfGrkcR8pXURL8yjNw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMqFeWEzVTloYqje/1kuqnhZ+4PwiADyDOiqqALlmCp+PZrXioBxMdH6FX1wI+eVxw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,

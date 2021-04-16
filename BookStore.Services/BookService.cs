@@ -1,4 +1,5 @@
 ﻿using BookStore.Entities;
+using BookStore.Entities.Quotes;
 using BookStore.Repositories.Interfaces;
 using BookStore.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -20,6 +21,11 @@ namespace BookStore.Services
         public void Add(Book book)
         {
             _bookRepository.AddBook(book);
+        }
+
+        public void Add(QuoteMap quote)
+        {
+            _bookRepository.AddQuote(quote);
         }
 
         public void Delete(int bookID)
@@ -127,6 +133,8 @@ namespace BookStore.Services
 
             return Tuple.Create(Categories, Authors, Publishers);
         }
+
+        
 
 
         #endregion

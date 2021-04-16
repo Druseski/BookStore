@@ -42,6 +42,7 @@ namespace BookStore
             services.AddTransient<IShoppingCartRepository, ShoppingCartRepository>();
             services.AddTransient<IWishListRepository, WishListRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IQuoteRepository,QuoteRepository>();
 
             //***Services
 
@@ -53,6 +54,7 @@ namespace BookStore
             services.AddTransient<IWishListService, WishListService>();
             services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<IUserService, UserSevice>();
+            services.AddTransient<IQuoteService,QuoteService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

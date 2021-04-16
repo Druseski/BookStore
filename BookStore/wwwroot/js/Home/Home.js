@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     setInterval(() => {
         GetQuotes();
-    }, 5000);
+    }, 15000);
 
 });
 

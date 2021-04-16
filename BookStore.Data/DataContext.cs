@@ -20,7 +20,7 @@ namespace BookStore.Data
         public DbSet<Publisher> Publishers { get; set; }
 
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
-         //public DbSet<Quote> Quotes { get; set; }
+       public DbSet<QuoteMap> Quotes { get; set; }
        public DbSet<WishList> WishLists { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
